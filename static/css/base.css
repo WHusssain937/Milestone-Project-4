@@ -1,3 +1,5 @@
+/*--------------------------------------------Main*/
+
 html {
     height: 100%;
 }
@@ -9,6 +11,12 @@ body {
     color: #555;
 }
 
+/*--------------------------------------------Navbars*/
+
+.logo-font {
+    text-transform: uppercase;
+    font-family: 'Gayathri';
+}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -18,23 +26,30 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
+.btn-black {
+    background: black;
+    color: white;
 }
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+
+/*--------------------------------------------Home*/
 
 .main-logo-link {
     width: fit-content;
 }
 
-.shop-now-button {
+.browse-now-button {
     background: black;
     color: white;
     min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
 }
 
 .browse-now-button:hover,
@@ -45,14 +60,6 @@ body {
 .btn-black:focus {
     background: #222;
     color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
 }
 
 /* -------------------------------- Media Queries */
