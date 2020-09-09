@@ -11,11 +11,14 @@ body {
     color: #555;
 }
 
+.font-family {
+    font-family: 'Gayathri';
+}
+
 /*--------------------------------------------Navbars*/
 
 .logo-font {
     text-transform: uppercase;
-    font-family: 'Gayathri';
 }
 /* from Bulma */
 .icon {
@@ -47,19 +50,23 @@ body {
 }
 
 .browse-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
+    background: #ffcc00;
+    color: #fff;
+    min-width: 2.75rem;
 }
 
 .browse-now-button:hover,
 .browse-now-button:active,
-.browse-now-button:focus,
+.browse-now-button:focus {
+    background: #ff8c00;
+    color: #fff;
+}
+
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: #262626;
+    color: #fff;
 }
 
 /* -------------------------------- Media Queries */
