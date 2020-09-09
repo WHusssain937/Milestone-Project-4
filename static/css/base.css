@@ -9,9 +9,6 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-}
-
-.font-family {
     font-family: 'Gayathri';
 }
 
@@ -40,6 +37,10 @@ body {
 
 .text-black {
     color: #000 !important;
+}
+
+.bg-black {
+    background-color: #000;
 }
 
 
