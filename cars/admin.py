@@ -15,7 +15,7 @@ class CarAdmin(admin.ModelAdmin):
         'image'
     )
 
-    ordering = ('brand',)
+    ordering = ('sku',)
 
 
 class BrandAdmin(admin.ModelAdmin):
