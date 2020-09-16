@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block page_header %}
+<div class="container header-container">
+	<div class="row">
+		<div class="col"></div>
+	</div>
+</div>
+{% endblock %} 
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+			<div class="image-container my-5">
+				{% if car.image %}
+				<a href="{{ car.image.url }}" target="_blank">
+					<img class="card-img-top img-fluid" src="{{ car.image.url }}" alt="{{ car.make }} {{ car.model }}"/>
+		        </a>
+				{% else %}
+				<a href="">
+					<img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ car.make }} {{ car.model }}"/>
+		        </a>
+				{% endif %}
+			</div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-4">
+			<div class="car-details-container mb-5 mt-md-5">
+				<p class="mb-0">{{ car.make }} {{ car.model }} {{ car.year }}</p>
+				<p class="mb-0 logo-font">{{ car.sku }}</p>
+				<p class="lead mb-0 text-left font-weight-bold">£{{ car.price }}</p>
+				<p class="mb-0"><i class="fas fa-tachometer-alt fa-lg"></i>{{ car.mileage }}</p>
+				<p class="mb-0"><i class="fas fa-gas-pump fa-lg"></i>{{ car.fuel_type }}</p>
+				<p class="mb-0"><i class="fas fa-cog fa-lg"></i>{{ car.transmission }}</p>
+				<p class="mb-0">Car Info:</p>
+				<p class="mb-0">{{ car.description }}</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

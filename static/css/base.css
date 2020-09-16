@@ -22,11 +22,12 @@ body {
     z-index: -1;
 }
 
-/*--------------------------------------------Navbars*/
-
 .logo-font {
     text-transform: uppercase;
 }
+
+/*--------------------------------------------Navbars*/
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -54,7 +55,7 @@ body {
 }
 
 
-/*--------------------------------------------Home*/
+/*--------------------------------------------Home Page*/
 
 .main-logo-link {
     width: fit-content;
@@ -101,5 +102,15 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 8.5rem;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
