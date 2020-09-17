@@ -12,8 +12,21 @@ def all_cars(request):
     cars = Car.objects.all()
     query = None
     brand = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'brand':
+                sortkey = 'brand__brand_name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            cars = cars.order_by(sortkey)
+
         if 'brand' in request.GET:
             print('#######################################')
             brands = request.GET['brand'].split(",")
@@ -30,11 +43,14 @@ def all_cars(request):
     
             queries = Q(make__icontains=query) | Q(model__icontains=query)
             cars = cars.filter(queries)   
+    
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'cars': cars,
         'search_term': query,
         'current_brands': brand,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'cars/cars.html', context)
