@@ -11,23 +11,34 @@ def all_cars(request):
 
     cars = Car.objects.all()
     query = None
+    brand = None
 
     if request.GET:
+        if 'brand' in request.GET:
+            print('#######################################')
+            brands = request.GET['brand'].split(",")
+            print(brands)
+            cars = cars.filter(brand__brand_name__in=brands)
+            print(cars)
+            brands = Brand.objects.filter(brand_name__in=brands)
+            
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('cars'))
-        
-        queries = Q(make__icontains=query) | Q(model__icontains=query)
-        cars = cars.filter(queries)
+    
+            queries = Q(make__icontains=query) | Q(model__icontains=query)
+            cars = cars.filter(queries)   
 
     context = {
         'cars': cars,
         'search_term': query,
+        'current_brands': brand,
     }
 
     return render(request, 'cars/cars.html', context)
+
 
 def car_detail(request, car_id):
     """ View will show details on each individual car """
