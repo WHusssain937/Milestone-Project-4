@@ -28,11 +28,8 @@ def all_cars(request):
             cars = cars.order_by(sortkey)
 
         if 'brand' in request.GET:
-            print('#######################################')
             brands = request.GET['brand'].split(",")
-            print(brands)
             cars = cars.filter(brand__brand_name__in=brands)
-            print(cars)
             brands = Brand.objects.filter(brand_name__in=brands)
             
         if 'q' in request.GET:
@@ -40,10 +37,10 @@ def all_cars(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('cars'))
-    
+                
             queries = Q(make__icontains=query) | Q(model__icontains=query)
             cars = cars.filter(queries)   
-    
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -66,3 +63,4 @@ def car_detail(request, car_id):
     }
     
     return render(request, 'cars/car_details.html', context)
+

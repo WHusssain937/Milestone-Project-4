@@ -28,14 +28,19 @@
 		</div>
 		<div class="col-12 col-md-6 col-lg-4">
 			<div class="car-details-container mb-5 mt-md-5">
-				<p class="mb-0">{{ car.make }} {{ car.model }} {{ car.year }}</p>
-				<p class="mb-0 logo-font">{{ car.sku }}</p>
-				<p class="lead mb-0 text-left font-weight-bold">£{{ car.price }}</p>
-				<p class="mb-0"><i class="fas fa-tachometer-alt fa-lg"></i>{{ car.mileage }}</p>
-				<p class="mb-0"><i class="fas fa-gas-pump fa-lg"></i>{{ car.fuel_type }}</p>
-				<p class="mb-0"><i class="fas fa-cog fa-lg"></i>{{ car.transmission }}</p>
-				<p class="mb-0">Car Info:</p>
-				<p class="mb-0">{{ car.description }}</p>
+				<p class="mb-1 car-detail-heading logo-font font-weight-bold">{{ car.make }} {{ car.model }} {{ car.year }}</p>
+                <p class="mb-1 logo-font font-weight-bold">{{ car.sku }}</p>
+				<p class="lead mb-0 text-left font-weight-bold">{% load humanize %}
+					£{{ car.price|intcomma }}</p>
+				<p class="mb-1 font-weight-bold">
+					<i class="fas fa-tachometer-alt fa-lg"></i> {{ car.mileage }}
+					<i class="fas fa-gas-pump fa-lg ml-4"></i> {{ car.fuel_type }}
+					<i class="fas fa-cog fa-lg ml-4"></i> {{ car.transmission }}
+				</p>
+				<p class="mb-1 font-weight-bold">Car Info:</p>
+				<p class="mb-2 text-dark">{{ car.description }}</p>
+                <a href="" class="car-detail-btn btn btn-md font-weight-bold">Buy Now</a>
+                <a href="" class="car-detail-btn btn btn-md font-weight-bold ml-3">Add To Wishlist</a>
 			</div>
 		</div>
 	</div>

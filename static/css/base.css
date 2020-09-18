@@ -81,6 +81,25 @@ body {
     color: #fff;
 }
 
+/* -------------------------------- Cars */
+
+.car-detail-heading {
+    font-size: 1.5rem;
+}
+
+.car-detail-btn {
+    background: #000000;
+    color: #fff;
+    min-width: 2.75rem;
+}
+
+.car-detail-btn:hover,
+.car-detail-btn:active,
+.car-detail-btn:focus {
+    background: #a9a9a9;
+    color: #fff;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
