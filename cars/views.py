@@ -39,6 +39,7 @@ def all_cars(request):
                 return redirect(reverse('cars'))
                 
             queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query)
+            
             cars = cars.filter(queries)   
 
     current_sorting = f'{sort}_{direction}'
