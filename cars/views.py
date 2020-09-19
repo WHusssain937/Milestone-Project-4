@@ -31,14 +31,14 @@ def all_cars(request):
             brands = request.GET['brand'].split(",")
             cars = cars.filter(brand__brand_name__in=brands)
             brands = Brand.objects.filter(brand_name__in=brands)
-            
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('cars'))
                 
-            queries = Q(make__icontains=query) | Q(model__icontains=query)
+            queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query)
             cars = cars.filter(queries)   
 
     current_sorting = f'{sort}_{direction}'
