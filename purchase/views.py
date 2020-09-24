@@ -1,8 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .forms import Car_OrderForm
 
-def view_purchase(request):
+
+def purchase(request):
     """ View will render the product purchase page """
+    order_form = Car_OrderForm()
+    template = 'purchase/purchase.html'
     
-    return render(request, 'purchase/purchase.html')
+    context = {
+        'order_form': order_form,
+    }
+
+    return render(request, template, context)
