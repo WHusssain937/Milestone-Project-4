@@ -25,9 +25,10 @@
 	</div>
 	<div class="row">
 		<div class="col-12 col-lg-6 order-lg-last mb-5">
+            <p class="text-muted">Purchase Summary</p>
 			<div class="row">
 				<div class="col-7 offset-2">
-					<p class="mb-1 mt-0 small text-muted">Item</p>
+					<p class="mb-1 mt-0 small text-muted">Car</p>
 				</div>
 				<div class="col-3 text-right">
 					<p class="mb-1 mt-0 small text-muted">Subtotal</p>
@@ -45,6 +46,7 @@
 				</div>
 				<div class="col-7">
 					<p class="my-0"><strong>{{ car.make }} {{ car.model }} {{ car.year }}</strong></p>
+                    <p class="my-0 small logo-font"><strong>{{ car.sku }}</strong></p>
 					<p class="my-0 small text-muted">{{ car.transmission }} | {{ car.fuel_type }}</p>
 				</div>
 				<div class="col-3 text-right">
