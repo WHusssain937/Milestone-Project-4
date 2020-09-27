@@ -24,60 +24,59 @@
 		</div>
 	</div>
 	<div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
-           <div class="row">
-              <div class="col-7 offset-2">
-                  <p class="mb-1 mt-0 small text-muted">Item</p>
-              </div>
-              <div class="col-3 text-right">
-                  <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-              </div>
-           </div>
-           {% for car in cars %}
-                    <div class="row">
-                        <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}">
-                                {% if car.image %}
-                                    <img class="w-100" src="{{ car.image.url }}" alt="{{ car.make }} {{ car.model }}">
-                                {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ car.make }} {{ car.model }}">
-                                {% endif %}
-                            </a>
-                        </div>
-                        <div class="col-7">
-                            <p class="my-0"><strong>{{ car.make }} {{ car.model }} {{ car.year }}</strong></p>
-                            <p class="my-0 small text-muted">{{ car.transmission }} | {{ car.fuel_type }}</p>
-                        </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">
-                               {% load humanize %}
-							   £{{ car.price|intcomma }}
-                            </p>
-                        </div>
-                    </div>
-                {% endfor %}
-                <hr class="my-0">
-                <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
-                        <p class="my-0">Delivery: £0.00</p>
-                        <p class="my-0">Grand Total:</p>
-                    </div>
-                    <div class="col-3">
-                        <p class="my-0">£0.00</p>
-                        <p class="my-0">
-                          <strong>
+		<div class="col-12 col-lg-6 order-lg-last mb-5">
+			<div class="row">
+				<div class="col-7 offset-2">
+					<p class="mb-1 mt-0 small text-muted">Item</p>
+				</div>
+				<div class="col-3 text-right">
+					<p class="mb-1 mt-0 small text-muted">Subtotal</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2 mb-1">
+					<a href="{% url 'car_detail' car.id %}">
+						{% if car.image %}
+					      <img class="w-100" src="{{ car.image.url }}" alt="{{ car.make }} {{ car.model }}">
+                        {% else %}
+						  <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ car.make }} {{ car.model }}">
+                        {% endif %}
+                    </a>
+				</div>
+				<div class="col-7">
+					<p class="my-0"><strong>{{ car.make }} {{ car.model }} {{ car.year }}</strong></p>
+					<p class="my-0 small text-muted">{{ car.transmission }} | {{ car.fuel_type }}</p>
+				</div>
+				<div class="col-3 text-right">
+					<p class="my-0 small text-muted">
+						{% load humanize %}
+						£{{ car.price|intcomma }}
+					</p>
+				</div>
+			</div>
+			<hr class="my-0">
+			<div class="row text-black text-right">
+				<div class="col-7 offset-2">
+					<p class="my-0">Delivery</p>
+					<p class="my-0">Order Total</p>
+				</div>
+				<div class="col-3">
+					<p class="my-0">
+                      £0.00
+                    </p>
+					<p class="my-0">
+						<strong>
                             {% load humanize %}
 							£{{ car.price|intcomma }}
-                          </strong>
-                        </p>
-                    </div>
-                </div>
-        </div>
+                        </strong>
+					</p>
+				</div>
+			</div>
+		</div>
 		<div class="col-12 col-lg-6">
 			<p class="logo-font font-weight-bold">Please complete the following form below to complete your purchase
 				with German Whips</p>
-            <form action="{% url 'purchase' %}" method="POST" id="purchase-form">
+            <form action="{% url 'purchase' car.id %}" method="POST" id="purchase-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
@@ -125,7 +124,7 @@
                        <span class="icon">
 		                    <i class="fas fa-exclamation-circle"></i>
 				        </span>
-                        <span>Your card will be charged<strong>£{{ total }}</strong></span>
+                        <span>Your card will be charged<strong> £{% load humanize %}{{ car.price|intcomma }}</strong></span>
                     </p>
 				</div>
             </form>
