@@ -14,6 +14,8 @@ def purchase(request, car_id):
     context = {
         'order_form': order_form,
         'car': car,
+        'stripe_public_key': 'pk_test_51HIwyCGiwXlMOYYApouICUxrODcKuUnRPz84uzPbdBySwnVnYa4mTD3XQM16a8tI6SJalulaBlkPDtnyFxpbypPf004pZAZaIU',
+        'client_secret': 'text client secret',
     }
 
     return render(request, template, context)
