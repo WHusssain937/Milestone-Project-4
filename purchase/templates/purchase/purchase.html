@@ -87,6 +87,9 @@
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                    <!-- Hidden input field -->
+                    <input name="car_id" value={{car.id}} hidden />
+                    <!--  -->
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
