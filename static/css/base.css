@@ -61,6 +61,11 @@ body {
     width: fit-content;
 }
 
+.browse-now {
+    margin-top: 12rem;
+    font-size: 2.5rem;
+}
+
 .browse-now-button {
     background: #ffcc00;
     color: #fff;
