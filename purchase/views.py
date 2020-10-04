@@ -33,6 +33,7 @@ def purchase(request, car_id):
             car = Car.objects.get(id=car_id)
             order.car = car
             order.user = request.user
+            order.total = car.price
             order.save()
         
             request.session['save_info'] = 'save-info' in request.POST
