@@ -38,7 +38,7 @@ def all_cars(request):
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('cars'))
                 
-            queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query)
+            queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query) | Q(transmission__icontains=query)
             
             cars = cars.filter(queries)   
 
