@@ -23,4 +23,4 @@ class Car(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        return '{}, {}'.format(self.make, self.model)
+        return '{}, {}, {}'.format(self.make, self.model, self.year)

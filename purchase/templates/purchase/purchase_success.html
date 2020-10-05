@@ -26,7 +26,158 @@
         </div>
 	</div>
 	<div class="row">
-		<div class="col-12 col-lg-7"></div>
+		<div class="col-12 col-lg-7">
+			<div class="order-confirmed-wrapper p-2 border">
+				<div class="row">
+					<div class="col">
+						<small class="text-muted">Order Info:</small>
+					</div>
+				</div>
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Order Number:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.order_number }}</p>
+                    </div>
+                </div>    
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Order Date:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.date_of_purchase }}</p>
+                    </div>
+                </div>       
+
+                <div class="row">
+					<div class="col">
+						<small class="text-muted">Car Details:</small>
+					</div>
+				</div>
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Car:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.car }}</p>
+                    </div>
+                </div>     
+
+                <div class="row">
+					<div class="col">
+						<small class="text-muted">We Will Be Delivering Your German Whip To:</small>
+					</div>
+				</div>
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Full Name:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.full_name }}</p>
+                    </div>
+                </div> 
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Address 1:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.street_address1 }}</p>
+                    </div>
+                </div>    
+
+                {% if car_order.street_address2 %}
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Address 2:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.street_address2 }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                    
+                {% if car_order.county %}    
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Town or City:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.town_or_city }}</p>
+                    </div>
+                </div>
+                {% endif %}    
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">County:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.county }}</p>
+                    </div>
+                </div>
+                    
+                {% if car_order.postcode %}    
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Postal Code:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.postcode }}</p>
+                    </div>
+                </div>
+                {% endif %}    
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Country:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.country }}</p>
+                    </div>
+                </div>    
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Phone Number:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ car_order.phone_number }}</p>
+                    </div>
+                </div>    
+
+                <div class="row">
+					<div class="col">
+						<small class="text-muted">Billing Info:</small>
+					</div>
+				</div>
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Delivery Total:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">£0.00</p>
+                    </div>
+                </div>    
+
+                <div class="row">
+					<div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Order Total:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">
+                          £{% load humanize %}{{ car_order.total|intcomma }}
+                        </p>
+                    </div>
+                </div>    
+			</div>
+		</div>
 	</div>
 </div>
 {% endblock %}
