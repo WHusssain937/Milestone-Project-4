@@ -35,7 +35,7 @@ def purchase(request, car_id):
             order.user = request.user
             order.total = car.price
             order.save()
-        
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('purchase_success',
                             args=[order.order_number]))
@@ -47,7 +47,7 @@ def purchase(request, car_id):
         car = get_object_or_404(Car, pk=car_id)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
-           amount=car.price,
+           amount=int(car.price*100),
            currency=settings.STRIPE_CURRENCY,
         )
 
