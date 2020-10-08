@@ -33,7 +33,7 @@ def purchase(request, car_id):
 
     if request.method == 'POST':
         car_id = request.POST['car_id']
-        
+
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -48,6 +48,9 @@ def purchase(request, car_id):
         order_form = Car_OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = str(pid)
+            order.original_purchase = car_id
             car = Car.objects.get(id=car_id)
             order.car = car
             order.user = request.user
