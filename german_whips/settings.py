@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'cars',
     'purchase',
+    'profile',
 
 
     # Other

@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 
 from cars.models import Car
+from profile.models import UserProfile
 
 
 class Car_Order(models.Model):
@@ -14,6 +15,8 @@ class Car_Order(models.Model):
     user = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
     car = models.ForeignKey(Car, null=False, blank=False, on_delete=models.CASCADE)
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_account = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, 
+                                     null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.CharField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
