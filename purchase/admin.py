@@ -11,7 +11,7 @@ class Car_OrderAdmin(admin.ModelAdmin):
               'town_or_city', 'street_address1', 'street_address2', 'county',
               'total', 'original_purchase', 'stripe_pid')
     
-    list_display = ('order_number', 'date_of_purchase', 'full_name', 'total')
+    list_display = ('user', 'order_number', 'date_of_purchase', 'full_name', 'total')
 
     ordering = ('-date_of_purchase',)
 

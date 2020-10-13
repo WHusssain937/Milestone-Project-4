@@ -5,6 +5,8 @@ from django.conf import settings
 
 from .models import Car_Order
 from cars.models import Car
+from profile.forms import UserProfileForm
+from profile.models import UserProfile
 from .forms import Car_OrderForm
 
 import stripe
@@ -58,6 +60,7 @@ def purchase(request, car_id):
             order.save()
 
             request.session['save_info'] = 'save-info' in request.POST
+            print(request.session.get('save_info'))
             return redirect(reverse('purchase_success',
                             args=[order.order_number]))
 
@@ -72,7 +75,24 @@ def purchase(request, car_id):
            currency=settings.STRIPE_CURRENCY,
         )
 
-        order_form = Car_OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = Car_OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = Car_OrderForm()
+        else:
+            order_form = Car_OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -94,8 +114,29 @@ def purchase_success(request, order_number):
     """
     Handle Successful Purchases
     """
-    save_info = request.session.get('save-info')
+    save_info = request.session.get('save_info')
     car_order = get_object_or_404(Car_Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        car_order.user_profile = profile
+        car_order.save()
+
+    if save_info:
+        profile_data = {
+            'default_phone_number': car_order.phone_number,
+            'default_country': car_order.country,
+            'default_postcode': car_order.postcode,
+            'default_town_or_city': car_order.town_or_city,
+            'default_street_address1': car_order.street_address1,
+            'default_street_address2': car_order.street_address2,
+            'default_county': car_order.county,
+        }
+        user_profile_form = UserProfileForm(profile_data, instance=profile)
+        if user_profile_form.is_valid():
+            user_profile_form.save()
+        
     messages.success(request, f'Your Order Has Been Processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {car_order.email}.')
