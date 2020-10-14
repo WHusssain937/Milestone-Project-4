@@ -20,7 +20,7 @@ def cache_purchase_data(request):
         stripe.PaymentIntent.modify(pid, metadata={
             'car_id': request.session.get('car_id'),
             'save_info': request.POST.get('save_info'),
-            'user': request.user,
+            'username': request.user,
         })
         return HttpResponse(status=200)
     except Exception as e:
@@ -55,12 +55,12 @@ def purchase(request, car_id):
             order.original_purchase = car_id
             car = Car.objects.get(id=car_id)
             order.car = car
-            order.user = request.user
+            # order.user = request.user
             order.total = car.price
             order.save()
 
             request.session['save_info'] = 'save-info' in request.POST
-            print(request.session.get('save_info'))
+
             return redirect(reverse('purchase_success',
                             args=[order.order_number]))
 
