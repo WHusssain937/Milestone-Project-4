@@ -1,0 +1,27 @@
+Dear {{ order.full_name }}
+
+Thanks for your recent purchase from German Whips. 
+
+We can confirm that your order in now progress and we will be contact you on {{ order.phone_number}} to discuss arranging a date & time to deliver your vehicle.
+
+Order Information
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date_of_purchase }}
+Order Total: £{% load humanize %}{{ order.total|intcomma }}
+
+Delivery Address
+Street Address 1: {{ order.street_address1 }}
+Street Address 2: {{ order.street_address2 }}
+Town/City: {{ order.town_or_city }}
+County: {{ order.county }}
+Postcode: {{ order.postcode }}
+Country: {{ order.country }}
+
+If you have any issues please do not hesitate to contact us at {{ contact_email }}
+
+Thanks for Buying with German Whips!
+
+Your Sincerely, 
+
+German Whips
+
