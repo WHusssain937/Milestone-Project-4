@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Car, Brand
+from .forms import CarForm
 
 # Create your views here.
 
@@ -65,3 +66,13 @@ def car_detail(request, car_id):
     
     return render(request, 'cars/car_details.html', context)
 
+
+def add_car(request):
+    """ Add a product to the store """
+    form = CarForm()
+    template = 'cars/add_car.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
