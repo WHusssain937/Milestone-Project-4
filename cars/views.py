@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Car, Brand
 from .forms import CarForm
@@ -67,8 +68,13 @@ def car_detail(request, car_id):
     return render(request, 'cars/car_details.html', context)
 
 
+@login_required
 def add_car(request):
     """ Add a car to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorised admin can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = CarForm(request.POST, request.FILES)
         if form.is_valid():
@@ -88,8 +94,13 @@ def add_car(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_car(request, car_id):
     """ Edit a car in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorised admin can do that.')
+        return redirect(reverse('home'))
+
     car = get_object_or_404(Car, pk=car_id)
     if request.method == 'POST':
         form = CarForm(request.POST, request.FILES, instance=car)
@@ -112,7 +123,13 @@ def edit_car(request, car_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_car(request, car_id):
+    """ Delete a car in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorised admin can do that.')
+        return redirect(reverse('home'))
+
     car = get_object_or_404(Car, pk=car_id)
     car.delete()
     messages.success(request, 'Car has been deleted!')
