@@ -38,9 +38,9 @@
 				<div class="col-2 mb-1">
 					<a href="{% url 'car_detail' car.id %}">
 						{% if car.image %}
-					      <img class="w-100" src="{{ car.image.url }}" alt="{{ car.make }} {{ car.model }}">
+					      <img class="img-fluid" src="{{ car.image.url }}" alt="{{ car.make }} {{ car.model }}">
                         {% else %}
-						  <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ car.make }} {{ car.model }}">
+						  <img class="img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ car.make }} {{ car.model }}"/>
                         {% endif %}
                     </a>
 				</div>
