@@ -112,7 +112,7 @@ def edit_car(request, car_id):
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
         form = CarForm(instance=car)
-        messages.success(request, f'You are editing {car.make} {car.model} {car.year}')
+        messages.success(request, f'You are editing {car.sku}, {car.make} {car.model} {car.year}')
 
     template = 'cars/edit_car.html'
     context = {
