@@ -68,7 +68,7 @@ def car_detail(request, car_id):
 
 
 def add_car(request):
-    """ Add a product to the store """
+    """ Add a car to the store """
     if request.method == 'POST':
         form = CarForm(request.POST, request.FILES)
         if form.is_valid():
@@ -79,10 +79,34 @@ def add_car(request):
             messages.error(request, 'Failed to add car. Please ensure the form is valid.')
     else:
         form = CarForm()
-        
+
     template = 'cars/add_car.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_car(request, car_id):
+    """ Edit a car in the store """
+    car = get_object_or_404(Car, pk=car_id)
+    if request.method == 'POST':
+        form = CarForm(request.POST, request.FILES, instance=car)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('car_detail', args=[car.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = CarForm(instance=car)
+        messages.success(request, f'You are editing {car.make} {car.model} {car.year}')
+
+    template = 'cars/edit_car.html'
+    context = {
+        'form': form,
+        'car': car,
     }
 
     return render(request, template, context)
