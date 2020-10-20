@@ -21,34 +21,34 @@
         </div>
         <div class="row">
             <div class="col">
-                {% if car in cars %}
+                {% if car %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
                             <thead>
                                 <tr>
-                                    <th>Car</th>
-                                    <th>Details</th>
-                                    <th>Price</th>
+                                    <th scope="col">Car Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Remove</th>
+                                    <th scope="col">Buy</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for car in cars %}
                                     <tr>
-                                        <td>
-                                        {% if car.image %}
-                                            <a href="{% url 'car_detail' car.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ car.image.url }}" alt="{{ car.make }} {{ car.model }}"/>
-                                            </a>
-                                        {% else %}
-                                            <a href="{% url 'car_detail' car.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ car.make }} {{ car.model }}"/>
-                                            </a>
-                                        {% endif %}
-                                        {{ car.make }} {{ car.model }} {{ car.year }}</td>
-                                        <td>{{ car. }}</td>
-                                        <td>{{ car. }}</td>
+                                        <td class="p-3 w-25">
+                                            <img class="img-fluid rounded" src="{{ car.image.url }}">
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0"><strong>{{ car.make }} {{ car.model }} {{ car.year }}</strong></p>
+                                            <p class="my-0 small text-muted">SKU: {{ car.sku|upper }}</p>
+                                            <p class="my-0"><strong>Fuel Type:</strong> {{ car.fuel_type }}</p>
+                                            <p class="my-0"><strong>Transmission:</strong> {{ car.transmission }}</p>
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0">{% load humanize %}
+                                                £{{ car.price|intcomma }}</p>
+                                        </td>
                                     </tr>
-                                {% endfor %}
                             </tbody>
                         </table>
                     </div>
