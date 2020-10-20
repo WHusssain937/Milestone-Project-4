@@ -21,7 +21,37 @@
         </div>
         <div class="row">
             <div class="col">
-                {% if %}
+                {% if car in cars %}
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>Car</th>
+                                    <th>Details</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for car in cars %}
+                                    <tr>
+                                        <td>
+                                        {% if car.image %}
+                                            <a href="{% url 'car_detail' car.id %}">
+                                                <img class="card-img-top img-fluid" src="{{ car.image.url }}" alt="{{ car.make }} {{ car.model }}"/>
+                                            </a>
+                                        {% else %}
+                                            <a href="{% url 'car_detail' car.id %}">
+                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ car.make }} {{ car.model }}"/>
+                                            </a>
+                                        {% endif %}
+                                        {{ car.make }} {{ car.model }} {{ car.year }}</td>
+                                        <td>{{ car. }}</td>
+                                        <td>{{ car. }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 {% else %}
                     <p class="lead mb-5">Your WishList is Empty.</p>
                     <a href="{% url 'cars' %}" class="btn btn-outline-black rounded-0 btn-lg">
