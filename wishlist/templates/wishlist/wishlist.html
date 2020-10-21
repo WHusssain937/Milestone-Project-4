@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="col">
-                {% if car %}
+                {% if wishlist_item %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
                             <thead>
@@ -34,21 +34,23 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                {% for item in wishlist_item %}
                                     <tr>
                                         <td class="p-3 w-25">
-                                            <img class="img-fluid rounded" src="{{ car.image.url }}">
+                                            <img class="img-fluid rounded" src="{{ item.car.image.url }}">
                                         </td>
                                         <td class="py-3">
-                                            <p class="my-0"><strong>{{ car.make }} {{ car.model }} {{ car.year }}</strong></p>
-                                            <p class="my-0 small text-muted">SKU: {{ car.sku|upper }}</p>
-                                            <p class="my-0"><strong>Fuel Type:</strong> {{ car.fuel_type }}</p>
-                                            <p class="my-0"><strong>Transmission:</strong> {{ car.transmission }}</p>
+                                            <p class="my-0"><strong>{{ item.car.make }} {{ item.car.model }} {{ item.car.year }}</strong></p>
+                                            <p class="my-0 small text-muted">SKU: {{ item.car.sku|upper }}</p>
+                                            <p class="my-0"><strong>Fuel Type:</strong> {{ item.car.fuel_type }}</p>
+                                            <p class="my-0"><strong>Transmission:</strong> {{ item.car.transmission }}</p>
                                         </td>
                                         <td class="py-3">
                                             <p class="my-0">{% load humanize %}
-                                                £{{ car.price|intcomma }}</p>
+                                                £{{ item.car.price|intcomma }}</p>
                                         </td>
                                     </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                     </div>

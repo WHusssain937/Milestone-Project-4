@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -10,9 +10,16 @@ from cars.models import Car
 
 
 def view_wishlist(request):
-    """ View will return wishlist page """
+    """ View will render wishlist page """
+    user_profile = UserProfile.objects.get(user=request.user)
 
-    return render(request, 'wishlist/wishlist.html')
+    wishlist_item = Wishlist.objects.filter(user_profile=user_profile)
+
+    context = {
+        'wishlist_item': wishlist_item,
+    }
+
+    return render(request, 'wishlist/wishlist.html', context)
 
 
 @login_required
@@ -32,5 +39,5 @@ def add_to_wishlist(request, car_id):
         'user_profile': user_profile,
     }
 
-    return render(request, 'wishlist/wishlist.html', context)
+    return redirect(reverse('view_wishlist'), context)
     
