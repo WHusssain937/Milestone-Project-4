@@ -11,12 +11,9 @@ from cars.models import Car
 
 def view_wishlist(request):
     """ View will render wishlist page """
-    # car = Car.objects.get(id=car_id)
     user_profile = UserProfile.objects.get(user=request.user)
 
     wishlist_item = Wishlist.objects.filter(user_profile=user_profile)
-    #for item in wishlist_item:
-    #    print(item.car.id)
 
     context = {
         'wishlist_item': wishlist_item,
@@ -53,4 +50,3 @@ def remove_wishlist_item(request, car_id):
     delete_car.delete()
        
     return redirect(reverse('view_wishlist'))
-    
