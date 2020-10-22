@@ -29,8 +29,8 @@
                                     <th scope="col">Car Info</th>
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
-                                    <th scope="col">Remove</th>
-                                    <th scope="col">Buy</th>
+                                    <!--<th scope="col">Remove</th>
+                                    <th scope="col">Buy</th>-->
                                 </tr>
                             </thead>
                             <tbody>
@@ -48,6 +48,12 @@
                                         <td class="py-3">
                                             <p class="my-0">{% load humanize %}
                                                 £{{ item.car.price|intcomma }}</p>
+                                        </td>
+                                        <td class="py-5">
+                                            <a href="{% url 'remove_wishlist_item' item.car.id %}" class="btn btn-md rounded-3 text-white bg-danger">Remove</a>   
+                                        </td>
+                                        <td class="py-5">
+                                            <a href="" class="btn btn-md rounded-3 text-white bg-success">Buy This Whip</a>
                                         </td>
                                     </tr>
                                 {% endfor %}

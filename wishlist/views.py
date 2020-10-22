@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -11,9 +11,12 @@ from cars.models import Car
 
 def view_wishlist(request):
     """ View will render wishlist page """
+    # car = Car.objects.get(id=car_id)
     user_profile = UserProfile.objects.get(user=request.user)
 
     wishlist_item = Wishlist.objects.filter(user_profile=user_profile)
+    #for item in wishlist_item:
+    #    print(item.car.id)
 
     context = {
         'wishlist_item': wishlist_item,
@@ -25,7 +28,7 @@ def view_wishlist(request):
 @login_required
 def add_to_wishlist(request, car_id):
     """Adding a car to wishlist"""
-    car = get_object_or_404(Car, pk=car_id)
+    car = Car.objects.get(id=car_id)
     user_profile = UserProfile.objects.get(user=request.user)
 
     wished_car = Wishlist(
@@ -35,9 +38,19 @@ def add_to_wishlist(request, car_id):
     wished_car.save()
 
     context = {
-        'car': car,
-        'user_profile': user_profile,
+        'wished_car': wished_car,
     }
 
     return redirect(reverse('view_wishlist'), context)
+
+
+@login_required
+def remove_wishlist_item(request, car_id):
+    """ Removes a car in the wishlist """
+    car = Car.objects.get(id=car_id)
+    
+    delete_car = Wishlist.objects.filter(car=car)
+    delete_car.delete()
+       
+    return redirect(reverse('view_wishlist'))
     
