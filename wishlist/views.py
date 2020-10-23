@@ -9,6 +9,7 @@ from cars.models import Car
 # Create your views here.
 
 
+@login_required
 def view_wishlist(request):
     """ View will render wishlist page """
     user_profile = UserProfile.objects.get(user=request.user)
@@ -28,12 +29,21 @@ def add_to_wishlist(request, car_id):
     car = Car.objects.get(id=car_id)
     user_profile = UserProfile.objects.get(user=request.user)
 
-    wished_car = Wishlist(
+    wished_car, created = Wishlist.objects.get_or_create(
         car=car,
         user_profile=user_profile,
     )
     wished_car.save()
 
+    if created:
+        # When car is added to wishlist
+        messages.success(request, 'This Car has been successfully added to your \
+                     Wishlist')
+    else:
+        # when car has already been added to wishlist
+        messages.info(request, 'The car is already in your wishlist')
+        return redirect(reverse('car_detail', args=[car.id]))
+    
     context = {
         'wished_car': wished_car,
     }
@@ -45,8 +55,11 @@ def add_to_wishlist(request, car_id):
 def remove_wishlist_item(request, car_id):
     """ Removes a car in the wishlist """
     car = Car.objects.get(id=car_id)
-    
+
     delete_car = Wishlist.objects.filter(car=car)
     delete_car.delete()
-       
+
+    messages.success(request, f'You have removed {car.sku}, {car.make} \
+                     {car.model} {car.year} successfully from the Wishlist.')
+
     return redirect(reverse('view_wishlist'))
