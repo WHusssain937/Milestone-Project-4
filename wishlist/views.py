@@ -37,11 +37,12 @@ def add_to_wishlist(request, car_id):
 
     if created:
         # When car is added to wishlist
-        messages.success(request, 'This Car has been successfully added to your \
-                     Wishlist')
+        messages.success(request, f'{car.sku}, {car.make} {car.model} {car.year} \
+                         has been successfully added to your Wishlist')
     else:
         # when car has already been added to wishlist
-        messages.info(request, 'The car is already in your wishlist')
+        messages.info(request, f'{car.sku}, {car.make} {car.model} {car.year} \
+                      is already in your wishlist')
         return redirect(reverse('car_detail', args=[car.id]))
     
     context = {
