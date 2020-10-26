@@ -1,0 +1,53 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block page_header %}
+<div class="container header-container">
+	<div class="row">
+		<div class="col"></div>
+	</div>
+</div>
+{% endblock %} 
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+		<div class="col text-center mt-3">
+              <h3 class="font-weight-bold">{{ review.make }} {{ review.model }} {{ review.year }} Review</h3>      
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+			<div class="image-container my-3">
+				{% if review.image %}
+				<a href="{{ review.image.url }}" target="_blank">
+					<img class="card-img-top img-fluid" src="{{ review.image.url }}" alt="{{ review.make }} {{ review.model }}"/>
+		        </a>
+				{% else %}
+				<a href="">
+					<img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ review.make }} {{ review.model }}"/>
+		        </a>
+				{% endif %}
+			</div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-4 pt-4">
+			<div class="car-details-container mb-5 mt-md-5">
+                <p class="font-weight-bold text-center mb-5">
+                    <i class="fas fa-plus-circle fa-lg"></i> {{ review.advantage }}
+                </p>
+				<p class="mb-1 font-weight-bold text-center">
+					<i class="fas fa-minus-circle fa-lg"></i>{{ review.disadvantage }} 
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+    <div class="col-12">
+        <p class="mt-2 text-center"><strong>Completed By:</strong> {{ review.review_by }}</p>
+        <p class="mt-1 text-center"><strong>Review: </strong> {{ review.car_review }}</p>
+    </div>
+</div>
+
+{% endblock %}

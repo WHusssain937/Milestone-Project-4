@@ -32,11 +32,11 @@
 				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
 					<div class="card h-100 border border-dark">
 						{% if review.image %}
-                            <a href="">
+                            <a href="{% url 'review_page' review.id %}">
                                 <img class="card-img-top img-fluid" src="{{ review.image.url }}" alt="{{ review.make }} {{ review.model }}"/>
                             </a>
 						{% else %}
-                            <a href="">
+                            <a href="{% url 'review_page' review.id %}">
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ review.make }} {{ review.model }}"/>
                             </a>
 						{% endif %}
