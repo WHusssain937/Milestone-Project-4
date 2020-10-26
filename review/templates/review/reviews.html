@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mt-3">
+            {% if request.GET.brand %}
+                <h3 class="logo-font font-weight-bold">Browse {{ request.GET.brand }} Reviews Below 
+                    <i class="fas fa-arrow-down fa-sm"></i>
+                </h3>
+            {% else %}
+                <h3 class="logo-font font-weight-bold">Browse Reviews Below 
+                    <i class="fas fa-arrow-down fa-sm"></i>
+                </h3>
+            {% endif %}       
+            </div>
+	    </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                {% for review in reviews %}
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-toggle="modal" data-target="#review_modal">
+                        {% if review.image %}
+                                <img class="card-img-top img-fluid" src="{{ review.image.url }}" alt="{{ review.make }} {{ review.model }}"/>
+                        {% else %}
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ review.make }} {{ review.model }}"/>
+                        {% endif %}
+                        <p>{{ review.make }} {{ review.model }} {{ review.year }}</p>
+                    </button>
+
+                    
+                {% endfor %}
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
+{% endblock %}
