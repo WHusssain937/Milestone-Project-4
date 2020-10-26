@@ -22,6 +22,7 @@ body {
     z-index: -1;
 }
 
+
 /* ------------------------------- Bootstrap Toasts */
 
 .logo-font {
@@ -239,5 +240,17 @@ body {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 991px) {
+    .review-search {
+        margin-left: 5rem; 
+    }
+}
+
+@media (max-width: 576px) {
+    .review-search {
+        margin-left: 2rem; 
     }
 }

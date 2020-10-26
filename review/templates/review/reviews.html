@@ -13,7 +13,7 @@
 <div class="overlay"></div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col text-center mt-3">
+		<div class="col-lg-6 text-center mt-3">
         {% if request.GET.brand %}
              <h3 class="logo-font font-weight-bold">Browse {{ request.GET.brand }} Reviews Below 
                  <i class="fas fa-arrow-down fa-sm"></i>
@@ -24,6 +24,27 @@
              </h3>
         {% endif %}       
 		</div>
+        <div class="col-lg-6 text-center mt-3">
+            <form method="GET" action="">
+                <div class="input-group w-75 review-search">
+                    <input
+                        class="form-control border border-black rounded-2"
+                        type="text"
+                        name="q"
+                        placeholder="Search An Review"
+                        />
+                    <div class="input-group-append">
+                        <button
+                            class="form-control btn btn-black border border-black rounded-2"
+                            type="submit">
+                                <span class="icon">
+                                <i class="fas fa-search"></i>
+                                </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
 	</div>
 	<div class="row mt-3">
 		<div class="car-container col-10 offset-1">
