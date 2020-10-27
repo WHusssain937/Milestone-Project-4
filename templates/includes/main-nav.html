@@ -21,10 +21,10 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="car-reviews-link">
           <a class="dropdown-item" href="{% url 'all_reviews' %}">All Reviews</a>
-          <a class="dropdown-item" href="">Volkswagen Reviews</a>
-          <a class="dropdown-item" href="">Audi Reviews</a>
-          <a class="dropdown-item" href="">BMW Reviews</a>
-          <a class="dropdown-item" href="">Mercedes-Benz Reviews</a>
+          <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=volkswagen">Volkswagen Reviews</a>
+          <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=audi">Audi Reviews</a>
+          <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=bmw">BMW Reviews</a>
+          <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=mercedes-benz">Mercedes-Benz Reviews</a>
         </div>
       </li>
       <li class="nav-item">

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Review
+from cars.models import Brand
 
 # Create your views here.
 
@@ -12,21 +13,28 @@ def all_reviews(request):
 
     reviews = Review.objects.all()
     query = None
+    brand = None
 
     if request.GET:
+        if 'brand' in request.GET:
+            brands = request.GET['brand'].split(",")
+            reviews = reviews.filter(brand__brand_name__in=brands)
+            brands = Brand.objects.filter(brand_name__in=brands)
+        
         if 'r' in request.GET:
             query = request.GET['r']
             if not query:
-                messages.error(request, "You didn't enter any search criteria")
+                messages.error(request, "You didn't enter any Search Criteria")
                 return redirect(reverse('all_reviews'))
 
-        queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query)
+            queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query)
 
-        reviews = reviews.filter(queries)
-
+            reviews = reviews.filter(queries)
+        
     context = {
         'reviews': reviews,
         'search_term': query,
+        'current_brands': brand,
     }
 
     return render(request, 'review/reviews.html', context)
