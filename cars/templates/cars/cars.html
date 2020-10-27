@@ -2,11 +2,11 @@
 {% load static %} 
 
 {% block page_header %}
-<div class="container header-container">
-	<div class="row">
-		<div class="col"></div>
-	</div>
-</div>
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %} 
 
 {% block content %}
@@ -38,6 +38,8 @@
                             <option value="make_desc" {% if current_sorting == 'make_desc' %}selected{% endif %}>Make (Z-A)</option>
                             <option value="model_asc" {% if current_sorting == 'model_asc' %}selected{% endif %}> Model (A-Z)</option>
                             <option value="model_desc" {% if current_sorting == 'model_desc' %}selected{% endif %}>Model (Z-A)</option>
+                            <option value="year_desc" {% if current_sorting == 'year_desc' %}selected{% endif %}>Year (New to Old)</option>
+                            <option value="year_asc" {% if current_sorting == 'year_asc' %}selected{% endif %}>Year (Old to New)</option>
 	                    </select>
 					</div>
 				</div>

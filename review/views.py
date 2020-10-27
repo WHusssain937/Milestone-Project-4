@@ -14,8 +14,21 @@ def all_reviews(request):
     reviews = Review.objects.all()
     query = None
     brand = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'brand':
+                sortkey = 'brand__brand_name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            reviews = reviews.order_by(sortkey)
+
         if 'brand' in request.GET:
             brands = request.GET['brand'].split(",")
             reviews = reviews.filter(brand__brand_name__in=brands)
@@ -30,11 +43,14 @@ def all_reviews(request):
             queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query)
 
             reviews = reviews.filter(queries)
+    
+    current_sorting = f'{sort}_{direction}'
         
     context = {
         'reviews': reviews,
         'search_term': query,
         'current_brands': brand,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'review/reviews.html', context)
