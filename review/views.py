@@ -72,7 +72,7 @@ def review_page(request, review_id):
 
 @login_required
 def add_review(request):
-    """ Add a car to the store """
+    """ Add a review to the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorised admin can do that.')
         return redirect(reverse('home'))
@@ -81,16 +81,45 @@ def add_review(request):
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
             review = form.save()
-            messages.success(request, 'Successfully added car!')
+            messages.success(request, 'Successfully added review!')
             return redirect(reverse('review_page', args=[review.id]))
         else:
-            messages.error(request, 'Failed to add car. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
     else:
         form = ReviewForm()
 
     template = 'review/add_review.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_review(request, review_id):
+    """ Edit a review in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorised admin can do that.')
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(Review, pk=review_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully Updated Review!')
+            return redirect(reverse('review_page', args=[review.id]))
+        else:
+            messages.error(request, 'Failed to update review. Please ensure the form is valid.')
+    else:
+        form = ReviewForm(instance=review)
+        messages.success(request, f'You are editing the review of {review.make} {review.model} {review.year}')
+
+    template = 'review/edit_review.html'
+    context = {
+        'form': form,
+        'review': review,
     }
 
     return render(request, template, context)
