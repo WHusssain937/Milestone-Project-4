@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Review
 from cars.models import Brand
@@ -69,7 +70,7 @@ def review_page(request, review_id):
     return render(request, 'review/review_page.html', context)
 
 
-# @login_required
+@login_required
 def add_review(request):
     """ Add a car to the store """
     if not request.user.is_superuser:
