@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Review
 from cars.models import Brand
+from .forms import ReviewForm
 
 # Create your views here.
 
@@ -66,4 +67,29 @@ def review_page(request, review_id):
     }
 
     return render(request, 'review/review_page.html', context)
-    
+
+
+# @login_required
+def add_review(request):
+    """ Add a car to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorised admin can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES)
+        if form.is_valid():
+            review = form.save()
+            messages.success(request, 'Successfully added car!')
+            return redirect(reverse('review_page', args=[review.id]))
+        else:
+            messages.error(request, 'Failed to add car. Please ensure the form is valid.')
+    else:
+        form = ReviewForm()
+
+    template = 'review/add_review.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
