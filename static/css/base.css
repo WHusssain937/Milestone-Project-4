@@ -7,7 +7,6 @@ html {
 body {
     background: url('/media/home-bg-image.png') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Gayathri';
 }
@@ -22,7 +21,7 @@ body {
     z-index: -1;
 }
 
-/* ------------------------------- Bootstrap Toasts */
+/* ------------------------------- Contact Page*/
 
 .contact {
     list-style-type: none;
@@ -84,29 +83,16 @@ body {
     width: fit-content;
 }
 
-.browse-now {
-    margin-top: 12rem;
-    font-size: 2.5rem;
+#home-row {
+    margin-top: 16rem;
 }
 
-.browse-now-button {
-    background: #ffcc00;
-    color: #fff;
-    min-width: 2.75rem;
+.bg-red {
+    background-color: #ff0000;
 }
 
-.browse-now-button:hover,
-.browse-now-button:active,
-.browse-now-button:focus {
-    background: #ff8c00;
-    color: #fff;
-}
-
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #262626;
-    color: #fff;
+.bg-gold {
+    background-color: #ffcc00;
 }
 
 /* -------------------------------- All Auth Form */
