@@ -59,13 +59,18 @@ body {
     width: 1.5rem;
 }
 
+.dropdown-item:hover {
+    color: #fff;
+    background-color: #000;
+}
+
 .btn-black {
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #000 !important;
 }
 
 .text-black {
@@ -242,6 +247,7 @@ body {
 
 @media (max-width: 576px) {
     .review-search {
+        margin-bottom: 1rem;
         margin-left: 2rem; 
     }
 }
