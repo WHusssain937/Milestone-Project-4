@@ -46,15 +46,15 @@
 
 <body>
 	<header class="container-fluid fixed-top">
-		<div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+		<div id="topnav" class="row bg-white pt-lg-2 d-lg-flex">
+			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
 				<a href="{% url 'home' %}" class="nav-link main-logo-link">
-					<h2 class="logo-font text-black my-0 ">
+					<h2 class="logo-font text-black my-0">
 						<strong>German Whips</strong>
 					</h2>
 				</a>
 			</div>
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-none d-lg-block d-xl-block">
 				<form method="GET" action="{% url 'cars' %}">
 					<div class="input-group w-100">
 						<input
@@ -75,7 +75,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-none d-lg-block d-xl-block">
 				<ul class="list-inline list-unstyled text-center text-lg-right my-0">
 					<li class="list-inline-item dropdown">
 						<a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
@@ -143,6 +143,20 @@
     {% block content %} 
     {% endblock %} 
     
+    <!--Footer -->
+    <footer class="navbar-fixed-bottom">
+        <div class="row bg-white border-top border-dark">
+            <div class="col-12 col-lg-4 pt-2 pb-1">
+                <a class="ml-5 text-dark" href="https://twitter.com/explore"
+                    target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+                <a class="ml-5 text-dark" href="https://www.instagram.com/"
+                    target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+                <a class="ml-5 text-dark" href="https://www.snapchat.com/l/en-gb/"
+                    target="_blank"><i class="fab fa-snapchat fa-3x"></i></a>
+            </div>
+        </div>
+    </footer>
+
     {% block postloadjs %}
         <script type="text/javascript">
             $('.toast').toast('show');
