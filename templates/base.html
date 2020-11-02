@@ -136,17 +136,19 @@
         {% endfor %}
     </div>
 	{% endif %} 
-    
+
     {% block page_header %} 
     {% endblock %} 
     
-    {% block content %} 
-    {% endblock %} 
-    
+    <div class="page-content">
+        {% block content %} 
+        {% endblock %} 
+    </div>
+
     <!--Footer -->
-    <footer class="navbar-fixed-bottom">
-        <div class="row bg-white border-top border-dark">
-            <div class="col-12 col-lg-4 pt-2 pb-1">
+    <footer>
+        <div class="row bg-white border-top border-dark mt-3">
+            <div class="col-12 pt-2 pb-1">
                 <a class="ml-5 text-dark" href="https://twitter.com/explore"
                     target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
                 <a class="ml-5 text-dark" href="https://www.instagram.com/"
@@ -162,6 +164,7 @@
             $('.toast').toast('show');
         </script>
     {% endblock %}
+
 </body>
 
 </html>
