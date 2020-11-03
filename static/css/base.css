@@ -5,26 +5,14 @@ html, body {
 }
 
 body {
-    background: url('/media/home-bg-image.png') no-repeat center center fixed;
-    background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Gayathri';
-    padding-top: 4rem; 
-}
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #fff;
-    z-index: -1;
+    padding-top: 4rem;
 }
 
 .page-content {
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 .footer-border {
@@ -99,7 +87,7 @@ body {
 }
 
 #home-row {
-    margin-top: 16rem;
+    margin-top: 10rem;
 }
 
 .bg-red {
