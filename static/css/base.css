@@ -27,6 +27,10 @@ body {
     min-height: 100vh;
 }
 
+.footer-border {
+    border-top: 5px #696969 solid;
+}
+
 /* ------------------------------- Contact Page*/
 
 .contact {

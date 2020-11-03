@@ -33,11 +33,11 @@
 		</div>
 		<div class="col-12 col-md-6 col-lg-4 pt-4">
 			<div class="car-details-container mb-5 mt-md-5">
-                <p class="font-weight-bold text-center mb-5">
+                <p class="font-weight-bold text-center mb-5 text-success">
                     <i class="fas fa-plus-circle fa-lg"></i> {{ review.advantage }}
                 </p>
-				<p class="mb-1 font-weight-bold text-center">
-					<i class="fas fa-minus-circle fa-lg"></i>{{ review.disadvantage }} 
+				<p class="mb-1 font-weight-bold text-center text-danger">
+					<i class="fas fa-minus-circle fa-lg"></i> {{ review.disadvantage }} 
 				</p>
 			</div>
             {% if request.user.is_superuser %}
@@ -51,8 +51,8 @@
 </div>
 <div class="container">
     <div class="col-12">
-        <p class="mt-2 text-center"><strong>Completed By:</strong> {{ review.review_by }}</p>
-        <p class="mt-1 text-center"><strong>Review: </strong> {{ review.car_review }}</p>
+        <p class="mt-2 text-center text-black"><strong>Completed By:</strong> {{ review.review_by }}</p>
+        <p class="mt-1 text-center text-black"><strong>Review: </strong> {{ review.car_review }}</p>
     </div>
 </div>
 

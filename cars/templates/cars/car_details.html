@@ -32,10 +32,10 @@
                 <p class="mb-1 logo-font font-weight-bold">{{ car.sku }}</p>
 				<p class="lead mb-0 text-left font-weight-bold">{% load humanize %}
 					£{{ car.price|intcomma }}</p>
-				<p class="mb-1 font-weight-bold">
-					<i class="fas fa-tachometer-alt fa-lg"></i> {{ car.mileage }}
-					<i class="fas fa-gas-pump fa-lg ml-4"></i> {{ car.fuel_type }}
-					<i class="fas fa-cog fa-lg ml-4"></i> {{ car.transmission }}
+				<p class="mb-1 text-black">
+					<i class="fas fa-tachometer-alt fa-lg text-info"></i> {{ car.mileage }}
+					<i class="fas fa-gas-pump fa-lg ml-4 text-info"></i> {{ car.fuel_type }}
+					<i class="fas fa-cog fa-lg ml-4 text-info"></i> {{ car.transmission }}
 				</p>
                 {% if request.user.is_superuser %}
                     <small class="ml-3">
@@ -44,7 +44,7 @@
                     </small>
                 {% endif %}
 				<p class="mb-1 font-weight-bold">Car Info:</p>
-				<p class="mb-2 text-dark">{{ car.description }}</p>
+				<p class="mb-2 text-black">{{ car.description }}</p>
                 <a href="{% url 'purchase' car.id %}" class="car-detail-btn btn btn-md font-weight-bold">Buy Now</a>
                 <a href="{% url 'add_to_wishlist' car.id %}" class="car-detail-btn btn btn-md font-weight-bold ml-3">Add To Wishlist</a>
 			</div>
