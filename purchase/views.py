@@ -2,6 +2,7 @@ from django.shortcuts import render, reverse, redirect, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
 from .models import Car_Order
 from cars.models import Car
@@ -29,6 +30,7 @@ def cache_purchase_data(request):
         return HttpResponse(content=e, status=400)
 
 
+@login_required
 def purchase(request, car_id):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
