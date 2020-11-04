@@ -13,7 +13,7 @@
 <div class="overlay"></div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+		<div class="col-12 col-xl-4 offset-xl-2">
 			<div class="image-container my-5">
 				{% if car.image %}
 				<a href="{{ car.image.url }}" target="_blank">
@@ -26,7 +26,7 @@
 				{% endif %}
 			</div>
 		</div>
-		<div class="col-12 col-md-6 col-lg-4">
+		<div class="col-12 col-xl-4">
 			<div class="car-details-container mb-5 mt-md-5">
 				<p class="mb-1 car-detail-heading logo-font font-weight-bold">{{ car.make }} {{ car.model }} {{ car.year }}</p>
                 <p class="mb-1 logo-font font-weight-bold">{{ car.sku }}</p>

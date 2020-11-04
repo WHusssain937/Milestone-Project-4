@@ -13,7 +13,7 @@
 <div class="overlay"></div>
 <div class="container">
 	<div class="row">
-		<div class="col-12 col-md-6">
+		<div class="col-12 col-xl-6">
 			<hr>
 			<h2 class="logo-font mb-4 font-weight-bold">Car Management</h2>
             <h5 class="text-muted">Adding a Car</h5>
@@ -22,7 +22,7 @@
 	</div>
 
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-xl-6">
             <form method="POST" action="{% url 'add_car' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
