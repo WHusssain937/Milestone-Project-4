@@ -28,7 +28,7 @@ body {
 }
 
 .footer-border {
-    border-top: 5px #696969 solid;
+    border-top: 3px #000 solid;
 }
 
 /* ------------------------------- Contact Page*/
@@ -98,16 +98,15 @@ body {
     width: fit-content;
 }
 
-#home-row {
-    margin-top: 10rem;
+.home-btn {
+    background: #fff;
 }
 
-.bg-red {
-    background-color: #ff0000;
-}
-
-.bg-gold {
-    background-color: #ffcc00;
+.home-btn:hover,
+.home-btn:active,
+.home-btn:focus {
+    background: #a9a9a9;
+    color: #fff;
 }
 
 /* -------------------------------- All Auth Form */
@@ -246,6 +245,18 @@ body {
     
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        margin-top: 13rem; 
+    }
+}
+
+@media (max-width: 576px) {
+    .home-content {
+        margin-top: 5.25rem; 
     }
 }
 
