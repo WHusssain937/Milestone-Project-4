@@ -272,3 +272,9 @@ body {
         margin-left: 2rem; 
     }
 }
+
+@media (min-width: 1024px) {
+    .search-box-review {
+        margin-left: 5rem; 
+    }
+}
