@@ -21,6 +21,7 @@ class Car(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=0)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    for_sale = models.BooleanField(default=True)
 
     def __str__(self):
         return '{}, {}, {}'.format(self.make, self.model, self.year)

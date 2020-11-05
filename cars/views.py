@@ -11,7 +11,7 @@ from .forms import CarForm
 def all_cars(request):
     """ View will show all cars, including sorting and search queries """
 
-    cars = Car.objects.all()
+    cars = Car.objects.filter(for_sale=True)
     query = None
     brand = None
     sort = None

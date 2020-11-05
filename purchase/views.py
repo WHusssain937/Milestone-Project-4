@@ -61,6 +61,9 @@ def purchase(request, car_id):
             order.total = car.price
             order.save()
 
+            car.for_sale = False
+            car.save()
+            
             request.session['save_info'] = 'save-info' in request.POST
 
             return redirect(reverse('purchase_success',
