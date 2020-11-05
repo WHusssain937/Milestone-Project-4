@@ -20,47 +20,36 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                {% if wishlist_item %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for item in wishlist_item %}
-                                    <tr>
-                                        <td class="p-3 w-25">
-                                            <a href="{% url 'car_detail' item.car.id %}">
-                                                <img class="img-fluid rounded" src="{{ item.car.image.url }}">
-                                            </a>
-                                        </td>
-                                        <td class="py-3">
-                                            <p class="my-0"><strong>{{ item.car.make }} {{ item.car.model }} {{ item.car.year }}</strong></p>
-                                            <p class="my-0 small text-muted">SKU: {{ item.car.sku|upper }}</p>
-                                            <p class="my-0"><strong>Fuel Type:</strong> {{ item.car.fuel_type }}</p>
-                                            <p class="my-0"><strong>Transmission:</strong> {{ item.car.transmission }}</p>
-                                        </td>
-                                        <td class="py-3">
-                                            <p class="my-5 text-black font-weight-bold">{% load humanize %}
-                                                £{{ item.car.price|intcomma }}</p>
-                                        </td>
-                                        <td class="py-5">
-                                            <a href="{% url 'remove_wishlist_item' item.car.id %}" class="btn btn-md rounded-3 text-white bg-danger">Remove</a>   
-                                        </td>
-                                        <td class="py-5">
-                                            <a href="{% url 'purchase' item.car.id %}" class="btn btn-md rounded-3 text-white bg-success">Purchase</a>
-                                        </td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
+            {% if wishlist_item %}
+                <div class="col-2 d-none d-sm-block">Car</div>
+                <div class="col-6 col-md-4">Car Info</div>
+                <div class="col-3">Price</div>
+                <div class="col-3">Options</div>
+                {% for item in wishlist_item %}
+                    <div class="col-2 p-3 w-25 d-none d-sm-block">
+                        <a href="{% url 'car_detail' item.car.id %}">
+                            <img class="img-fluid rounded" src="{{ item.car.image.url }}">
+                        </a>
                     </div>
-                {% else %}
+                    <div class="col-6 col-md-4 py-3">
+                        <a class="wishlist-link text-black" href="{% url 'car_detail' item.car.id %}">
+                            <p class="my-0"><strong>{{ item.car.make }} {{ item.car.model }} {{ item.car.year }}</strong></p>
+                        </a>
+                        <p class="my-0 small text-muted">SKU: {{ item.car.sku|upper }}</p>
+                        <p class="my-0"><strong>Fuel Type:</strong> {{ item.car.fuel_type }}</p>
+                        <p class="my-0"><strong>Transmission:</strong> {{ item.car.transmission }}</p>
+                    </div>
+                    <div class="col-3 py-0">
+                        <p class="my-5 text-black font-weight-bold">{% load humanize %}
+                            £{{ item.car.price|intcomma }}</p>
+                    </div>
+                    <div class="col-3 py-3">
+                        <a href="{% url 'remove_wishlist_item' item.car.id %}" class="btn btn-md rounded-3 text-white bg-danger mr-5 mb-2">Remove</a>
+                        <a href="{% url 'purchase' item.car.id %}" class="btn btn-md rounded-3 text-white bg-success">Purchase</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
                     <p class="lead mb-5">Your WishList is Empty.</p>
                     <a href="{% url 'cars' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
@@ -68,8 +57,8 @@
                         </span>
                         <span class="text-uppercase">Start Browsing</span>
                     </a>
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

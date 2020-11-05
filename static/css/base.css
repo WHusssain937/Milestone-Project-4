@@ -31,10 +31,14 @@ body {
     border-top: 3px #000 solid;
 }
 
-/* ------------------------------- Contact Page*/
+/* ------------------------------- Contact Page/Wishlist*/
 
 .contact {
     list-style-type: none;
+}
+
+.wishlist-link {
+    text-decoration: none !important;
 }
 
 /* ------------------------------- Bootstrap Toasts */
