@@ -44,7 +44,7 @@
                             £{{ item.car.price|intcomma }}</p>
                     </div>
                     <div class="col-3 py-3">
-                        <a href="{% url 'remove_wishlist_item' item.car.id %}" class="btn btn-md rounded-3 text-white bg-danger mr-5 mb-2">Remove</a>
+                        <a href="{% url 'remove_wishlist_item' item.car.id %}" class="btn btn-md separate-btns rounded-3 text-white bg-danger mr-5">Remove</a>
                         <a href="{% url 'purchase' item.car.id %}" class="btn btn-md rounded-3 text-white bg-success">Purchase</a>
                     </div>
                 {% endfor %}

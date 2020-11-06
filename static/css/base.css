@@ -282,3 +282,11 @@ body {
         margin-left: 5rem; 
     }
 }
+
+@media (max-width: 1125px) {
+    .separate-btns {
+        margin-bottom: 1rem; 
+    }
+}
+
+

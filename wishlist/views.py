@@ -6,15 +6,15 @@ from .models import Wishlist
 from profile.models import UserProfile
 from cars.models import Car
 
-# Create your views here.
-
 
 @login_required
 def view_wishlist(request):
     """ View will render wishlist page """
+
     user_profile = UserProfile.objects.get(user=request.user)
 
-    wishlist_item = Wishlist.objects.filter(user_profile=user_profile)
+    wishlist_item = Wishlist.objects.filter(user_profile=user_profile, 
+                                            car__for_sale=True)
 
     context = {
         'wishlist_item': wishlist_item,
