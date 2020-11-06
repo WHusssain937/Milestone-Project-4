@@ -289,4 +289,10 @@ body {
     }
 }
 
+@media (max-width: 280px) {
+    .list-inline-item:not(:last-child) {
+        margin-right: 0; 
+    }
+}
+
 
