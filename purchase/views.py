@@ -1,4 +1,5 @@
-from django.shortcuts import render, reverse, redirect, get_object_or_404, HttpResponse
+from django.shortcuts import render, reverse, redirect, get_object_or_404, \
+                             HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -140,7 +141,7 @@ def purchase_success(request, order_number):
         user_profile_form = UserProfileForm(profile_data, instance=profile)
         if user_profile_form.is_valid():
             user_profile_form.save()
-        
+
     messages.success(request, f'Your Order Has Been Processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {car_order.email}.')

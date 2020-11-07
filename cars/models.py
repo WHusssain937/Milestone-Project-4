@@ -9,7 +9,8 @@ class Brand(models.Model):
 
 
 class Car(models.Model):
-    brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
+    brand = models.ForeignKey('Brand', null=True, blank=True,
+                              on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     make = models.CharField(max_length=254)
     model = models.CharField(max_length=254)

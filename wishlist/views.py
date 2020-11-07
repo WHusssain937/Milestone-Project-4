@@ -13,7 +13,7 @@ def view_wishlist(request):
 
     user_profile = UserProfile.objects.get(user=request.user)
 
-    wishlist_item = Wishlist.objects.filter(user_profile=user_profile, 
+    wishlist_item = Wishlist.objects.filter(user_profile=user_profile,
                                             car__for_sale=True)
 
     context = {

@@ -39,10 +39,12 @@ def all_cars(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('cars'))
-                
-            queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query) | Q(transmission__icontains=query)
-            
-            cars = cars.filter(queries)   
+
+            queries = Q(make__icontains=query) | Q(model__icontains=query) \
+                                               | Q(year__icontains=query) \
+                                               | Q(transmission__icontains=query)
+
+            cars = cars.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
@@ -64,7 +66,7 @@ def car_detail(request, car_id):
     context = {
         'car': car,
     }
-    
+
     return render(request, 'cars/car_details.html', context)
 
 
@@ -82,7 +84,8 @@ def add_car(request):
             messages.success(request, 'Successfully added car!')
             return redirect(reverse('car_detail', args=[car.id]))
         else:
-            messages.error(request, 'Failed to add car. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add car. \
+                                    Please ensure the form is valid.')
     else:
         form = CarForm()
 
@@ -109,10 +112,12 @@ def edit_car(request, car_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('car_detail', args=[car.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. \
+                                        Please ensure the form is valid.')
     else:
         form = CarForm(instance=car)
-        messages.success(request, f'You are editing {car.sku}, {car.make} {car.model} {car.year}')
+        messages.success(request, f'You are editing {car.sku}, {car.make} \
+                                                {car.model} {car.year}')
 
     template = 'cars/edit_car.html'
     context = {

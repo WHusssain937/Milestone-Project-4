@@ -35,14 +35,15 @@ def all_reviews(request):
             brands = request.GET['brand'].split(",")
             reviews = reviews.filter(brand__brand_name__in=brands)
             brands = Brand.objects.filter(brand_name__in=brands)
-        
+
         if 'r' in request.GET:
             query = request.GET['r']
             if not query:
                 messages.error(request, "You didn't enter any Search Criteria")
                 return redirect(reverse('all_reviews'))
 
-            queries = Q(make__icontains=query) | Q(model__icontains=query) | Q(year__icontains=query)
+            queries = Q(make__icontains=query) | Q(model__icontains=query) \
+                                               | Q(year__icontains=query)
 
             reviews = reviews.filter(queries)
     
@@ -84,7 +85,8 @@ def add_review(request):
             messages.success(request, 'Successfully added review!')
             return redirect(reverse('review_page', args=[review.id]))
         else:
-            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add review. \
+                                        Please ensure the form is valid.')
     else:
         form = ReviewForm()
 
@@ -111,10 +113,13 @@ def edit_review(request, review_id):
             messages.success(request, 'Successfully Updated Review!')
             return redirect(reverse('review_page', args=[review.id]))
         else:
-            messages.error(request, 'Failed to update review. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update review. \
+                                        Please ensure the form is valid.')
     else:
         form = ReviewForm(instance=review)
-        messages.success(request, f'You are editing the review of {review.make} {review.model} {review.year}')
+        messages.success(request, f'You are editing the review of \
+                                        {review.make} {review.model} \
+                                        {review.year}')
 
     template = 'review/edit_review.html'
     context = {

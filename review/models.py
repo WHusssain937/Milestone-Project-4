@@ -4,7 +4,7 @@ from cars.models import Brand
 
 
 class Review(models.Model):
-    brand = models.ForeignKey(Brand, null=False, blank=False, 
+    brand = models.ForeignKey(Brand, null=False, blank=False,
                               on_delete=models.CASCADE)
     make = models.CharField(max_length=254)
     model = models.CharField(max_length=254)
