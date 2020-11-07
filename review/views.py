@@ -43,7 +43,7 @@ def all_reviews(request):
                 return redirect(reverse('all_reviews'))
 
             queries = Q(make__icontains=query) | Q(model__icontains=query) \
-                                               | Q(year__icontains=query)
+                                               | Q(year__icontains=query) \
 
             reviews = reviews.filter(queries)
     
