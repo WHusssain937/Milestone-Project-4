@@ -1,34 +1,38 @@
+<!-- Main Navigation Links -->
 <div class="collapse navbar-collapse" id="main-nav">
-<ul class="navbar-nav w-auto mx-auto">
- <li class="nav-item active">
-        <a class="nav-link text-black logo-font font-weight-bold mr-5" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
- </li>
-<li class="nav-item dropdown logo-font">
-        <a class="nav-link text-black font-weight-bold mr-5" href="#" id="browse-cars-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Browse Cars
-        </a>
-        <div class="dropdown-menu" aria-labelledby="browse-cars-link">
-          <a class="dropdown-item" href="{% url 'cars' %}">All Cars</a>
-          <a class="dropdown-item" href="{% url 'cars' %}?brand=volkswagen">Volkswagen</a>
-          <a class="dropdown-item" href="{% url 'cars' %}?brand=audi">Audi</a>
-          <a class="dropdown-item" href="{% url 'cars' %}?brand=bmw">BMW</a>
-          <a class="dropdown-item" href="{% url 'cars' %}?brand=mercedes-benz">Mercedes-Benz</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown logo-font">
-        <a class="nav-link text-black font-weight-bold mr-5" href="#" id="car-reviews-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Car Reviews
-        </a>
-        <div class="dropdown-menu" aria-labelledby="car-reviews-link">
-          <a class="dropdown-item" href="{% url 'all_reviews' %}">All Reviews</a>
-          <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=volkswagen">Volkswagen Reviews</a>
-          <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=audi">Audi Reviews</a>
-          <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=bmw">BMW Reviews</a>
-          <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=mercedes-benz">Mercedes-Benz Reviews</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-black logo-font font-weight-bold mr-5" href="{% url 'contact_us' %}">Contact Us</a>
-      </li>
-</ul>
+    <ul class="navbar-nav w-auto mx-auto">
+    <li class="nav-item active">
+            <a class="nav-link text-black logo-font font-weight-bold mr-5" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <!-- Car Links -->
+    <li class="nav-item dropdown logo-font">
+            <a class="nav-link text-black font-weight-bold mr-5" href="#" id="browse-cars-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Browse Cars
+            </a>
+            <div class="dropdown-menu" aria-labelledby="browse-cars-link">
+            <a class="dropdown-item" href="{% url 'cars' %}">All Cars</a>
+            <a class="dropdown-item" href="{% url 'cars' %}?brand=volkswagen">Volkswagen</a>
+            <a class="dropdown-item" href="{% url 'cars' %}?brand=audi">Audi</a>
+            <a class="dropdown-item" href="{% url 'cars' %}?brand=bmw">BMW</a>
+            <a class="dropdown-item" href="{% url 'cars' %}?brand=mercedes-benz">Mercedes-Benz</a>
+            </div>
+        </li>
+        <!-- Review Links -->
+        <li class="nav-item dropdown logo-font">
+            <a class="nav-link text-black font-weight-bold mr-5" href="#" id="car-reviews-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Car Reviews
+            </a>
+            <div class="dropdown-menu" aria-labelledby="car-reviews-link">
+            <a class="dropdown-item" href="{% url 'all_reviews' %}">All Reviews</a>
+            <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=volkswagen">Volkswagen Reviews</a>
+            <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=audi">Audi Reviews</a>
+            <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=bmw">BMW Reviews</a>
+            <a class="dropdown-item" href="{% url 'all_reviews' %}?brand=mercedes-benz">Mercedes-Benz Reviews</a>
+            </div>
+        </li>
+        <!-- Contact Us Link -->
+        <li class="nav-item">
+            <a class="nav-link text-black logo-font font-weight-bold mr-5" href="{% url 'contact_us' %}">Contact Us</a>
+        </li>
+    </ul>
 </div>

@@ -20,17 +20,20 @@
             </div>
         </div>
         <div class="row">
+        <!-- Wishlist Item  -->
             {% if wishlist_item %}
                 <div class="col-2 d-none d-sm-block">Car</div>
                 <div class="col-6 col-md-4">Car Info</div>
                 <div class="col-3">Price</div>
                 <div class="col-3">Options</div>
                 {% for item in wishlist_item %}
+                    <!-- Car Image  -->
                     <div class="col-2 p-3 w-25 d-none d-sm-block">
                         <a href="{% url 'car_detail' item.car.id %}">
                             <img class="img-fluid rounded" src="{{ item.car.image.url }}">
                         </a>
                     </div>
+                    <!-- Car Details  -->
                     <div class="col-6 col-md-4 py-3">
                         <a class="wishlist-link text-black" href="{% url 'car_detail' item.car.id %}">
                             <p class="my-0"><strong>{{ item.car.make }} {{ item.car.model }} {{ item.car.year }}</strong></p>
@@ -43,6 +46,7 @@
                         <p class="my-5 text-black font-weight-bold">{% load humanize %}
                             £{{ item.car.price|intcomma }}</p>
                     </div>
+                    <!-- Wishlist Item Options -->
                     <div class="col-3 py-3">
                         <a href="{% url 'remove_wishlist_item' item.car.id %}" class="btn btn-md separate-btns rounded-3 text-white bg-danger mr-5">Remove</a>
                         <a href="{% url 'purchase' item.car.id %}" class="btn btn-md rounded-3 text-white bg-success">Purchase</a>

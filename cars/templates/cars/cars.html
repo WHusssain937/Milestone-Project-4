@@ -27,6 +27,7 @@
 	</div>
 	<div class="row">
 		<div class="car-container col-10 offset-1">
+            <!-- Sorting Dropdown -->
 			<div class="row mt-1 mb-2">
 				<div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
 					<div class="sort-select-wrapper w-50">
@@ -43,6 +44,7 @@
 	                    </select>
 					</div>
 				</div>
+                <!-- Listings Found-->
 				<div class="col-12 col-md-6 order-md-first">
 					<p class="text-muted mt-3 text-center text-md-left logo-font">
 					    Listings | {{ cars|length }} Cars{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
@@ -53,6 +55,7 @@
 				{% for car in cars %}
 				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
 					<div class="card h-100 border border-dark">
+                        <!-- Car Image -->
 						{% if car.image %}
 						<a href="{% url 'car_detail' car.id %}">
 							<img class="card-img-top img-fluid" src="{{ car.image.url }}" alt="{{ car.make }} {{ car.model }}"/>
@@ -62,6 +65,7 @@
 							<img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ car.make }} {{ car.model }}"/>
                         </a>
 						{% endif %}
+                        <!-- Car Details -->
 						<div class="card-body pb-0 text-center font-weight-bold">
 							<p class="mb-0">{{ car.make }} {{ car.model }}</p>
                             <p class="mb-0">{{ car.transmission }}</p>
@@ -82,7 +86,7 @@
 										</a>
 									</p>        
 									{% endif %}
-
+                                    <!-- Edit & Delete Functions -->
                                     {% if request.user.is_superuser %}
                                         <small class="ml-3">
                                             <a href="{% url 'edit_car' car.id %}">Edit</a> |

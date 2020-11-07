@@ -14,6 +14,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-12 col-xl-4 offset-xl-2">
+        <!-- Car Image -->
 			<div class="image-container my-5">
 				{% if car.image %}
 				<a href="{{ car.image.url }}" target="_blank">
@@ -26,6 +27,7 @@
 				{% endif %}
 			</div>
 		</div>
+        <!-- Car Details -->
 		<div class="col-12 col-xl-4">
 			<div class="car-details-container mb-5 mt-md-5">
 				<p class="mb-1 car-detail-heading logo-font font-weight-bold">{{ car.make }} {{ car.model }} {{ car.year }}</p>
@@ -37,6 +39,7 @@
 					<i class="fas fa-gas-pump fa-lg ml-4 text-info"></i> {{ car.fuel_type }}
 					<i class="fas fa-cog fa-lg ml-4 text-info"></i> {{ car.transmission }}
 				</p>
+                <!-- Edit & Delete Functions -->
                 {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_car' car.id %}">Edit</a> |
@@ -45,6 +48,7 @@
                 {% endif %}
 				<p class="mb-1 font-weight-bold">Car Info:</p>
 				<p class="mb-2 text-black">{{ car.description }}</p>
+                <!-- Buy & Wishlist Buttons -->
                 <a href="{% url 'purchase' car.id %}" class="car-detail-btn btn btn-md font-weight-bold">Buy Now</a>
                 <a href="{% url 'add_to_wishlist' car.id %}" class="car-detail-btn btn btn-md font-weight-bold ml-3">Add To Wishlist</a>
 			</div>

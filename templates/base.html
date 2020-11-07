@@ -5,37 +5,37 @@
 
 <head>
 	{% block meta %}
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	{% endblock %}
 
 	{% block extra_meta %}
 	{% endblock %}
 
 	{% block corecss %}
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" />
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
 	{% endblock %}
 
     {% block extra_css %} 
     {% endblock %} 
     
     {% block corejs %}
-    <script src="https://kit.fontawesome.com/4ca89b28d5.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" 
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-    </script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
-    <!-- Stripe -->
-    <script src="https://js.stripe.com/v3/"></script>
+        <script src="https://kit.fontawesome.com/4ca89b28d5.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+        <!-- Stripe -->
+        <script src="https://js.stripe.com/v3/"></script>
 	{% endblock %} 
     
     {% block extra_js %} 
@@ -45,6 +45,7 @@
 </head>
 
 <body>
+    <!-- Logo  -->
 	<header class="container-fluid fixed-top">
 		<div id="topnav" class="row bg-white pt-lg-2 d-lg-flex">
 			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -54,6 +55,7 @@
 					</h2>
 				</a>
 			</div>
+            <!-- Main Search Box For Cars  -->
 			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-none d-lg-block d-xl-block">
 				<form method="GET" action="{% url 'cars' %}">
 					<div class="input-group w-100">
@@ -75,6 +77,7 @@
 					</div>
 				</form>
 			</div>
+            <!-- My Account Options  -->
 			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-none d-lg-block d-xl-block">
 				<ul class="list-inline list-unstyled text-center text-lg-right my-0">
 					<li class="list-inline-item dropdown">
@@ -85,6 +88,7 @@
 								<p class="my-0">My Account</p>
 							</div>
 						</a>
+                        <!-- My Account Links  -->
 						<div class="dropdown-menu border-0" aria-labelledby="user-options">
 							{% if request.user.is_authenticated %}
 							    {% if request.user.is_superuser %}
@@ -103,6 +107,7 @@
 				</ul>
 			</div>
 		</div>
+        <!-- Free Delivery Banner  -->
         <div id="delivery-row" class="row text-center">
 			<div class="col bg-black text-white">
 				<h4 class="logo-font font-weight-bold my-1 mt-2">Free Delivery on All Vehicles Purchased</h4>
@@ -118,7 +123,7 @@
 			</nav>
 		</div>
 	</header>
-
+    <!-- Message Notfications  -->
 	{% if messages %}
 	<div class="message-container">
         {% for message in messages %}

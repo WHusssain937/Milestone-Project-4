@@ -24,6 +24,7 @@
 		</div>
 	</div>
 	<div class="row">
+        <!-- Purchase Summary -->
 		<div class="col-12 col-lg-6 order-lg-last mb-5">
             <p class="text-muted">Purchase Summary</p>
 			<div class="row">
@@ -35,6 +36,7 @@
 				</div>
 			</div>
 			<div class="row">
+                <!-- Car Image -->
 				<div class="col-2 mb-1">
 					<a href="{% url 'car_detail' car.id %}">
 						{% if car.image %}
@@ -44,6 +46,7 @@
                         {% endif %}
                     </a>
 				</div>
+                <!-- Car Details -->
 				<div class="col-7">
 					<p class="my-0"><strong>{{ car.make }} {{ car.model }} {{ car.year }}</strong></p>
                     <p class="my-0 small logo-font"><strong>{{ car.sku }}</strong></p>
@@ -75,6 +78,7 @@
 				</div>
 			</div>
 		</div>
+        <!-- Purchase Form -->
 		<div class="col-12 col-lg-6">
 			<p class="logo-font font-weight-bold">Please complete the following form below to complete your purchase
 				with German Whips</p>
@@ -134,8 +138,8 @@
 <div id="loading-overlay">
 	<h1 class="text-light logo-font loading-spinner">
 		<span class="icon">
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-            </span>
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+        </span>
 	</h1>
 </div>
 

@@ -6,6 +6,7 @@
 			<p class="my-0">Search</p>
 		</div>
 	</a>
+    <!-- Main Search Box For Cars  -->
 	<div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
 		<form method="GET" action="{% url 'cars' %}">
 			<div class="input-group w-100">
@@ -28,6 +29,7 @@
 		</form>
 	</div>
 </li>
+<!-- My Account Options  -->
 <li class="list-inline-item dropdown">
 	<a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
 		aria-expanded="false">
@@ -36,6 +38,7 @@
 			<p class="my-0">My Account</p>
 		</div>
 	</a>
+    <!-- My Account Links  -->
 	<div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
 		{% if request.user.is_authenticated %}
 		{% if request.user.is_superuser %}

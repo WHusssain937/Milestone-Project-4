@@ -20,6 +20,7 @@
 	<div class="row">
 		<div class="col-12 col-md-6 col-lg-4 offset-lg-2">
 			<div class="image-container my-3">
+                <!-- Car Image -->
 				{% if review.image %}
 				<a href="{{ review.image.url }}" target="_blank">
 					<img class="card-img-top img-fluid" src="{{ review.image.url }}" alt="{{ review.make }} {{ review.model }}"/>
@@ -31,6 +32,7 @@
 				{% endif %}
 			</div>
 		</div>
+        <!-- Review Info -->
 		<div class="col-12 col-md-6 col-lg-4 pt-4">
 			<div class="car-details-container mb-5 mt-md-5">
                 <p class="font-weight-bold text-center mb-5 text-success">
@@ -40,6 +42,7 @@
 					<i class="fas fa-minus-circle fa-lg"></i> {{ review.disadvantage }} 
 				</p>
 			</div>
+            <!-- Edit & Delete Functions -->
             {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="{% url 'edit_review' review.id %}">Edit</a> |
@@ -49,6 +52,7 @@
 		</div>
 	</div>
 </div>
+<!-- Car Review -->
 <div class="container">
     <div class="col-12">
         <p class="mt-2 text-center text-black"><strong>Completed By:</strong> {{ review.review_by }}</p>
