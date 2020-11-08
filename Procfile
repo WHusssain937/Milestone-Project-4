@@ -1,0 +1,1 @@
+web: gunicorn german-whips.wsgi:application
