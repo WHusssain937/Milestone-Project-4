@@ -1,1 +1,1 @@
-web: gunicorn german-whips.wsgi:application
+web: gunicorn german_whips.wsgi:application
