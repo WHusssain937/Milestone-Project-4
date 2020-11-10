@@ -41,6 +41,10 @@ body {
     text-decoration: none !important;
 }
 
+.separate-btns {
+    padding-right: 1.25rem;
+}
+
 /* ------------------------------- Bootstrap Toasts */
 
 .logo-font {
@@ -288,6 +292,13 @@ body {
         margin-bottom: 1rem; 
     }
 }
+
+@media (max-width: 576px) {
+    .mr-5 {
+        margin-right: 0rem!important;
+}
+}
+
 
 @media (max-width: 280px) {
     .list-inline-item:not(:last-child) {
