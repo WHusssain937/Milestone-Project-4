@@ -293,7 +293,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .mr-5 {
         margin-right: 0rem!important;
 }
