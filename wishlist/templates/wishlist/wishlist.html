@@ -43,17 +43,17 @@
                         <p class="my-0"><strong>Transmission:</strong> {{ item.car.transmission }}</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-5 text-black font-weight-bold">{% load humanize %}
+                        <p class="my-3 text-black font-weight-bold">{% load humanize %}
                             £{{ item.car.price|intcomma }}</p>
                     </div>
                     <!-- Wishlist Item Options -->
-                    <div class="col-3 py-3">
-                        <div class="row">
+                    <div class="col-3">
+                        <div class="row py-3">
                             <div class="col-12 col-lg-6">
-                                <a href="{% url 'remove_wishlist_item' item.car.id %}" class="btn btn-md separate-btns rounded-3 text-white bg-danger">Remove</a>
+                                <a href="{% url 'remove_wishlist_item' item.car.id %}" class="btn btn-md btn-length separate-btns rounded-3 text-white bg-danger">Remove</a>
                             </div>
                             <div class="col-12 col-lg-6">
-                                <a href="{% url 'purchase' item.car.id %}" class="btn btn-md rounded-3 text-white bg-success">Purchase</a>
+                                <a href="{% url 'purchase' item.car.id %}" class="btn btn-md rounded-3 separate-btns text-white bg-success">Purchase</a>
                             </div>
                         </div>
                     </div>

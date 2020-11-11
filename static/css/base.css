@@ -41,7 +41,7 @@ body {
     text-decoration: none !important;
 }
 
-.separate-btns {
+.btn-length {
     padding-right: 1.25rem;
 }
 
@@ -303,8 +303,14 @@ body {
 }
 
 @media (max-width: 1125px) {
-    .separate-btns {
+    .btn-length {
         margin-bottom: 1rem; 
+    }
+}
+
+@media (max-width: 576px) {
+    .separate-btns {
+        font-size: 0.75rem
     }
 }
 
@@ -319,3 +325,5 @@ body {
         margin-right: 0; 
     }
 }
+
+
