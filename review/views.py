@@ -46,9 +46,9 @@ def all_reviews(request):
                                                | Q(year__icontains=query) \
 
             reviews = reviews.filter(queries)
-    
+
     current_sorting = f'{sort}_{direction}'
-        
+
     context = {
         'reviews': reviews,
         'search_term': query,

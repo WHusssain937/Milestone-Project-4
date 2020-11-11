@@ -44,7 +44,7 @@ def add_to_wishlist(request, car_id):
         messages.info(request, f'{car.sku}, {car.make} {car.model} {car.year} \
                       is already in your wishlist')
         return redirect(reverse('car_detail', args=[car.id]))
-    
+
     context = {
         'wished_car': wished_car,
     }
