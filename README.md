@@ -2,15 +2,46 @@ German Whips
 
 My final milestone project is based on selling german cars and browsing through reviews about the newest german cars.
 
-/Essentially, this part is your sales pitch.
+Essentially, this part is your sales pitch.
 
 UX
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+User stories
 
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+Below I have listed the user stories for my final milestone project.
+
+As a new user, I would like the site to be easy to use.
+
+As a user, I would like to browse, search and sort through the different types of german cars.
+
+As a user, I want to be able to see an image of the cars for sale and information about the cars history such as mileage and year.
+
+As a user, I also want to be able to store cars for sale that I wish to buy to a wishlist in my account.
+
+As a user, I would like to be able to purchase the german car I am interested in.
+
+As a user, I would like to register an account so the my purchases and delivery information is retained for future use.
+
+As a user, I would like to be able to read reviews about the newest german cars.
+
+As a user, I would like to be able to sort and sort through the reviews.
+
+As a user, I would like to navigate and select the german brand which I am interested in and read reviews about.
+
+As a user, I would like to be able to easily contact the site and would like different ways to.
+
+As a superuser, I would like to be able to add, edit and remove german cars and reviews.
+
+
+Strategy
+
+Scope
+
+Structure
+
+Skeleton
+
+Surface
 
 Features
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
