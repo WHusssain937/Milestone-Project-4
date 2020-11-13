@@ -145,6 +145,9 @@ When the store owner clicks the edit link on a listing or review, it will take t
 Footer Social Links
 The links in the footer will allow the user to visit the app's social media platforms.
 
+Bootstrap Notifcations Toasts 
+The notifications would appear when the user have made a purchase, added to their wishlist and more.
+
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 Features Left to Implement
@@ -153,10 +156,40 @@ Bootstrap Carousel
 In future projects, I would like to add a carousel instead of a single image so that many images of the cars can be uploaded and viewed by the user.
 
 Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+
+HTML 
+This language was used to build the site and input content.
+
+CSS
+This was used to style to website and for media queries.
+
+Python 
+This was used to run the backend of the site and its functions.
+
+Javascript
+This language was used to function the sort dropdown, used for stripe purposes and more.
+
+Django
+This framework was vital to create my site and is used throughout, it was also used to create the databases for this site.
 
 JQuery
-The project uses JQuery to simplify DOM manipulation.
+This library was used to allow the bootstrap functions to work such as the notifcation toasts and the collapsible.
+
+Font Awesome
+This icon library was used in my project to place icons like the 'My Account' icon and the footer social icons.
+
+Google Fonts
+This was used to include the font for my site 'Gayathri'.
+
+Stripe
+This was used for functioning my payment method in the purchase app.
+
+Heroku
+The site is hosted on Heroku.
+
+AWS 
+The media and css for this site is hosted on AWS.
+
 Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
