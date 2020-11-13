@@ -148,7 +148,10 @@ The links in the footer will allow the user to visit the app's social media plat
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 Features Left to Implement
-Another feature idea
+
+Bootstrap Carousel
+In future projects, I would like to add a carousel instead of a single image so that many images of the cars can be uploaded and viewed by the user.
+
 Technologies Used
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
