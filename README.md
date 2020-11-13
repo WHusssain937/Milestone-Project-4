@@ -42,34 +42,108 @@ They can also read reviews about the latest german cars as well.
 
 Structure
 The site's layout is as follows:
-The navbar is broken down into two bits, in the top navbar is the logo, a search box and the 'My Account' link to a dropdown of its functions. In the second navbar will be the links for browsing through the main pages of the site like 'Browse Cars' and 'Car Reviews' which when clicked will provide a dropdown of links of the german brands, 'Home' and 'Contact Us' links are also in this navbar, in between the navbars is a delvery banner.
-When the user clicks on the my account icon a dropdown will appear with two links 'Register' and 'Login' and when they have logged in there will three links 'My Account', 'Wishlist' and 'Logout'. If a store owner logged in, they will see two additional links 'Car Management' and 'Review Management' which will clicked will allow the store owner to add cars and reviews to the site. 
-The home page will display a background image and some text with a link that will take you to browsing cars for sale.
-On the 'All Cars' page, all the cars for sale will displayed. Here the user can see all the german cars for sale, on the left will be a listing count to show the user how many cars are displayed and on the right will be a dropdown that will allow the user to sort the vehicle by make, model, price and year in the order they would like. If the user clicked on the 'Browse Cars' in the navbar and in the dropdown clicked on one of the following links 'Volkwagen', 'BMW', 'Audi' or 'Mercedes-Benz' it will take the user to that brand page with the cars listed for that particular brand. The layout of each listing on these pages are done in a card format, there will be border around the card, an image of the car will take up the top half of the card and the bottom half will be the car's make, model, year and price with a tag of the brand.
-On the 'All Reviews' page, all the reviews will displayed. Here the user can see all the german car reviews, there will be a review search box and below on the left will be a review count to show the user how many reviews are displayed and on the right will be a dropdown that will allow the user to sort the vehicle by make, model and year in the order they would like. If the user clicked on the 'Car Reviews' in the navbar and in the dropdown clicked on one of the following links 'Volkwagen Reviews', 'BMW Reviews', 'Audi Reviews' or 'Mercedes-Benz Reviews' it will take the user to that brand page with the reviews listed for that particular brand. The layout of each review on these pages are done in a card format, there will be border around the card, an image of the car will take up the top half of the card and the bottom half will be the car's make, model, year and who completed the review with a tag of the brand.
-When the store owner is on any of these pages for cars and reviews, at the bottom of each card there will be links to edit or delete the car or review.
-On a single listings page, on the left they will see a bigger image of the car and on the right will be more information on the car such as the mileage, fuel type and transmission and the car's information. Below this will be two buttons 'Buy Now' and 'Wishlist', when the 'Buy Now' button is clicked it will take the user to the purchase form and when the 'Wishlist' button is clicked it will take the user to wishlist page with the car added.
+The navbar is broken down into two sections, in the top navbar is the logo, a search box and the 'My Account' link to a dropdown of its functions. In the second navbar will be the links for browsing through the main pages of the site like 'Browse Cars' and 'Car Reviews' which when clicked will provide a dropdown of links of the german brands, 'Home' and 'Contact Us' links are also in this navbar, in between the navbars is a delvery banner.
+When the user clicks on the my account icon a dropdown will appear with two links 'Register' and 'Login' and when they have logged in there will three links 'My Account', 'Wishlist' and 'Logout'. If a store owner logged in, they will see two additional links 'Car Management' and 'Review Management'. 
+The home page will display a background image and some text with a 'Browse Now' button.
+On the 'All Cars' page, all the cars for sale will displayed. Here the user can see all the german cars for sale, on the left will be a listing count and on the right will be a sort dropdown. If the user clicked on the 'Browse Cars' in the navbar and in the dropdown clicked on one of the following links 'Volkwagen', 'BMW', 'Audi' or 'Mercedes-Benz' it will take the user to that brand page with the cars listed for that particular brand. The layout of each listing on these pages are done in a card format, there will be border around the card, an image of the car will take up the top half of the card and the bottom half will be the car's make, model, year and price with a tag of the brand.
+On the 'All Reviews' page, all the reviews will displayed. Here the user can see all the german car reviews, there will be a review search box and below on the left will be a review count and on the right will be a sort dropdown. If the user clicked on the 'Car Reviews' in the navbar and in the dropdown clicked on one of the following links 'Volkwagen Reviews', 'BMW Reviews', 'Audi Reviews' or 'Mercedes-Benz Reviews' it will take the user to that brand page with the reviews listed for that particular brand. The layout of each review on these pages are done in a card format, there will be border around the card, an image of the car will take up the top half of the card and the bottom half will be the car's make, model, year and who completed the review with a tag of the brand.
+When the store owner is on any of these pages for cars and reviews, at the bottom of each card there will be edit and delete links.
+On a single listings page, on the left they will see a bigger image of the car and on the right will be more information on the car such as the mileage, fuel type and transmission and the car's information. Below this will be two buttons 'Buy Now' and 'Wishlist'.
 on a single review page, on the left they will see a bigger image of the car and on the right will be a advantage and disadvantage of the car being reviewed and below this will be the review of the car.
 When on either a single listing or review, there will be a edit and delete links that a store owner can see and use, which will be below the disadvantage section.
-On the purchase page, on the the left will be the purchase form with the payment method at the bottom for the user to fill in the relevant information and on the right will be a small purchase summary.
+On the purchase page, on the the left will be the purchase form with the payment method at the bottom and on the right will be a small purchase summary.
 When the purchase is complete, it will display the order summary for the user with the order number included in this.
-The 'My Account' link will display a form for the user to fill and update their default delivery information on the left and on the right their order history.
-On the 'Wishlist' page, when a car is added it will be in a row, with a small image being first from the left then the car infomation, then the price of the car and two buttons, the 'Remove' button which will remove the car from the wishlist and the purchase button which will take the user to the purchase page.
-On the 'Contact Us' page, it will display a collapsible with three blocks 'By Phone', 'By Email' and 'By Post' when these are clicked they will open and will display the relevant information for the user.
+The 'My Account' page will display a default delivery information form on the left and on the right their order history.
+On the 'Wishlist' page, when a car is added it will be in a row, with a small image being first from the left then the car infomation, then the price of the car and two buttons.
+On the 'Contact Us' page, it will display a collapsible with three blocks 'By Phone', 'By Email' and 'By Post'.
 
 Skeleton
 
 Surface
 The colors that are used in the website are black and white with white being the dominant background color except in the delivery row and black being the dominant color of most of the text apart from the delivery row and text on the home page. I stuck with this colors as I think it gave the site a professional and efficient look and these are want german car are known for. The font that was used for the site was Gayathri, this was used as it was a professional style and was easily readable. The background image on the home page is of salesman shaking hands with a man and handing over car keys after completing a deal, this image was used as enticement for users to complete a deal to get a german car.
 
-
 Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
 Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z Reviews
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+
+Bootstrap First Navbar
+
+Logo 
+When click on the logo 'German Whips', it will return the user to the home page.
+
+Navbar Search Box
+This search box will allow the user to search for queries about the cars they would like to browse.
+
+'My Account' Dropdown
+This dropdown will allow the user to register or login to their account and after logging in will show the functions that the user has access to in their account such as their own wishlist.
+
+Bootstrap Second Navbar
+The links in the navbar and two dropdowns will take the user to the page they require.
+
+Bootstrap Mobile Nav
+When on a smaller device such as a tablet or mobile, the mobile nav will appear. There will be a search icon that when clicked will dropdown the search box instead and the hamburger icon when clicked will open the second navbar
+
+'Browse Now' Button
+When clicked, it will take the user to the page dislaying all cars for sale.
+
+Listings Count
+This will display how many cars are displaying and when a search query is made, the number of cars found.
+
+Review Count
+This will display how many reviews are displaying and when a search query is made, the number of reviews found.
+
+Cars Sort Dropdown
+This will allow the user to sort the cars by (A-Z) or (Z-A) for the make or model and they can sort the price from low to high or high to low. They can also sort the year from new to old or old to new. 
+
+Reviews Sort Dropdown
+This will allow the user to sort the reviews by (A-Z) or (Z-A) for the make or model and they can sort the year from new to old or old to new. 
+
+Reviews Search Box
+This search box will allow the user to search for queries about the reviews they would like to browse through.
+
+Listing Card
+When one of the car listings is clicked, it will take the user to the car detailed page of that listing.
+
+Review Card
+When one of the review listings is clicked, it will take the user to that review.
+
+Bootstrap Contact Collapsible
+When an collapsible is clicked, it will open the contact information for the user.
+
+Login/Register Forms
+These forms will allow the user to register an account and log in their account.
+
+'Buy Now' Button
+This button will take the user to the purchase form to buy the car.
+
+'Add to Wishlist' Button
+This button will added the car to the user's wishlist.
+
+Purchase Form
+This form will allow the user to fill in their delivery details and payment information to complete their purchase.
+
+Save Info Checkbox
+This checkbox in the purchase form when clicked will save the user delivery information to their account for future purchases.
+
+Default Delivery Form
+This form is where the user's delivery information will be stored, they can update it when they like and the information will appear in the purchase form.
+
+Order History
+This will display the user's purchase history when they place them so they know what they have bought.
+
+Wishlist Options
+The 'Remove' button which will remove the car from the wishlist and the purchase button which will take the user to the purchase page.
+
+Store Owner Features
+
+Car/Review Management
+These pages will display the add car/review forms for the store owner to add cars/reviews to the site.
+
+Edit/Remove Functions
+When the store owner clicks the edit link on a listing or review, it will take them to the edit form for it where they can edit the information. The remove link will delete the car or review from the site.
+
+Footer Social Links
+The links in the footer will allow the user to visit the app's social media platforms.
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
