@@ -164,25 +164,40 @@ CSS
 This was used to style to website and for media queries.
 
 Python 
-This was used to run the backend of the site and its functions.
+Python3 is used as programming language,and is used to run the backend of the site and its functions.
 
 Javascript
 This language was used to function the sort dropdown, used for stripe purposes and more.
 
 Django
-This framework was vital to create my site and is used throughout, it was also used to create the databases for this site.
+This is the web framework used.
 
 JQuery
 This library was used to allow the bootstrap functions to work such as the notifcation toasts and the collapsible.
+
+Stripe
+This was used for functioning my payment method in the purchase app.
+
+SQlite3
+This was the database used in production in gitpod.
+
+PostgreSQL
+This was the database used in deployment on Heroku.
+
+Jinja 
+This was used as the templating language for python.
+
+AllAuth
+This was used for to create registration, account management and authenthication.
+
+Crispy-Forms 
+This was used to easily build the forms for my site.
 
 Font Awesome
 This icon library was used in my project to place icons like the 'My Account' icon and the footer social icons.
 
 Google Fonts
 This was used to include the font for my site 'Gayathri'.
-
-Stripe
-This was used for functioning my payment method in the purchase app.
 
 Heroku
 The site is hosted on Heroku.
