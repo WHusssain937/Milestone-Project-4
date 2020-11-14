@@ -10,27 +10,53 @@ User stories
 
 Below I have listed the user stories for my final milestone project.
 
-As a new user, I would like the site to be easy to use.
+###### Site User Stories 
+As a user, I would like to view all and different types of german cars for sale.
 
-As a user, I would like to browse, search and sort through the different types of german cars.
+As a user, I would like to sort the cars so that I can view the cars in different order such as make, model, price and year.
 
-As a user, I want to be able to see an image of the cars for sale and information about the cars history such as mileage and year.
+As a user, I would to be able to search for a car by make, model, year, transmission and fuel type.
 
-As a user, I also want to be able to store cars for sale that I wish to buy to a wishlist in my account.
+As a user, I want to be able to view the car's details so that I can view information such as mileage, transmission and fuel type.
 
-As a user, I would like to be able to purchase the german car I am interested in.
+As a user, I would like to view all and different types of german reviews.
 
-As a user, I would like to register an account so the my purchases and delivery information is retained for future use.
+As a user, I would like to sort the reviews so that I can view the reviews in different order such as make, model and year.
 
-As a user, I would like to be able to read reviews about the newest german cars.
+As a user, I would to be able to search for a review by make, model and year.
 
-As a user, I would like to be able to sort and sort through the reviews.
+As a user, I want to be able to view the car review so that I can read the full review.
 
-As a user, I would like to navigate and select the german brand which I am interested in and read reviews about.
+As a user, I would like to register my own account so that I can make purchases and add cars that interest me to my wishlist and more.
 
 As a user, I would like to be able to easily contact the site and would like different ways to.
 
-As a store owner, I would like to be able to add, edit and remove german cars and reviews.
+##### Account Holder Stories 
+As an account holder, I want to be able to receive a registration email so that I can verify the registration of my account.
+
+As an account holder, I want to be able to login and logout of my account
+
+As an account holder, I want to be able to reset my password so that I can re-access my account.
+
+As an account holder, I also want to be view my personal information such as default delivery address and my order history.
+
+As an account holder, I also want to be able to add cars for sale that I wish to buy to a wishlist.
+
+###### Customer Stories 
+As an customer, I would like to be able to purchase the german car I am interested in.
+
+As a customer, I would to enter my payment so that I can complete my order.
+
+As a customer, I would like to view a order summary when I complete my purchase so I can confirm all the information is correct.
+
+As a customer, I would like to receive a confirmation email when I place my order.
+
+###### Store Owner Stories 
+As a store owner, I would like to be able to add german cars and reviews.
+
+As a store owner, I would like to be able to edit german cars and reviews.
+
+As a store owner, I would like to be able to delete german cars and reviews.
 
 Strategy
 My strategy was to create a site where users can purchase and read reviews about german cars.

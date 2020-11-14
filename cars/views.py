@@ -42,7 +42,8 @@ def all_cars(request):
 
             queries = Q(make__icontains=query) | Q(model__icontains=query) \
                                                | Q(year__icontains=query) \
-                                               | Q(transmission__icontains=query)
+                                               | Q(transmission__icontains=query) \
+                                               | Q(fuel_type__icontains=query)
 
             cars = cars.filter(queries)
 
