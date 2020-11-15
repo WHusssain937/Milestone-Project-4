@@ -240,7 +240,7 @@ This was used to include the font for my site 'Gayathri'.
 Heroku
 The site is hosted on Heroku.
 
-AWS 
+AWS S3 Bucket
 The media and css for this site is hosted on AWS.
 
 Testing

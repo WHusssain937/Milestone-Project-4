@@ -106,6 +106,9 @@ First, When I complete the full name field and click on the button to submit the
 Then, I will complete the detail fields in the form and submit the form, as expected the form doesn't submit as the delivery required fields haven't been completed.
 Then, When I complete all the required fields in details and delivery and submit the form, as expected it doesn't submit as the payment information hasn't been filled in.
 Then, I will complete all the required fields including the details, delivery and payment and submit the form, and as expected the purchase goes through correctly.
+While the page is loading, an overlay with a spinning arrow appears showing that the order is being processed.
+Then it will go through to the order summary page when complete.
+These payments are also visible on the Stripe Dashbord page. This confirms all the payments that have been passed through the system.
 
 Note: Due to Stripe's testing features, If you would like to test the payment functionality of this project, please use the following payment details: - Card number: 4242 4242 4242 4242 - CVC: any 3 digit number - Exparation Date: any future date
 
@@ -156,4 +159,32 @@ Automated Testing
 
 Websites & Devices Testing
 
+This site was tested on multiple devices varying different sizes and also on multiple browsers.
+
+Web Browers:
+Google Chrome
+Safari
+Firefox
+Microsoft Edge
+
+Devices:
+Iphone 7
+Iphone 8
+Samsung S10 Plus
+Acer Laptop
+Dell Computer
+
 Validation
+
+HTML 
+An error that was coming up during testing repeatedly was due to the django templates, these brackets {} and % which caused a lot of the errors were needed for the syntax to access the static, css files and the data so these errors can be ignored. Another error that came up was the doctype and language not being declared in many of the html templates, but these files are included into the base.html where they are declared so this issue was also ignored. The templating language was causing the errors but because this was needed the errors were ignored.
+
+CSS
+No errors were found during testing the css files.
+
+Javascript
+No errors found during testing.
+
+Python 
+No major errors found in testing. Only line too long and whitespace warning.
+
