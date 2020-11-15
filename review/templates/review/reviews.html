@@ -75,83 +75,84 @@
 				</div>
 			</div>
 		</div>
-        <div class="row mt-3">
-            <div class="car-container col-10 offset-1">
-                <div class="row">
-                    {% for review in reviews %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border border-dark">
-                                <!-- Car Image -->
-                                {% if review.image %}
-                                    <a href="{% url 'review_page' review.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ review.image.url }}" alt="{{ review.make }} {{ review.model }}"/>
-                                    </a>
-                                {% else %}
-                                    <a href="{% url 'review_page' review.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ review.make }} {{ review.model }}"/>
-                                    </a>
-                                {% endif %}
-                                    <!-- Review Details -->
-                                    <div class="card-body pb-0 text-center">
-                                        <p class="mb-0 font-weight-bold">{{ review.make }}</p>
-                                        <p class="mb-0 font-weight-bold">{{ review.model }}</p>
-                                        <p class="mb-0 font-weight-bold">{{ review.year }}</p>
-                                        <p class="mb-0">Completed By</p>
-                                        <p class="mb-0">{{ review.review_by }}</p>
-                                    </div>
-                                    <div class="card-footer bg-white pt-0 border-0 text-center">
-                                        <div class="row">
-                                            <div class="col">
-                                                {% if review.brand %}
-                                                    <p class="small mt-1 mb-0">
-                                                        <a class="text-muted logo-font"
-                                                            href="{% url 'all_reviews' %}?brand={{ review.brand.brand_name }}">
-                                                            <i class="fas fa-tags mr-1"></i>{{ review.brand.brand_name }}
-                                                        </a>
-                                                    </p>
-                                                {% endif %}
-                                                <!-- Edit & Delete Functions -->
-                                                {% if request.user.is_superuser %}
-                                                    <small class="ml-3">
-                                                        <a href="{% url 'edit_review' review.id %}">Edit</a> |
-                                                        <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
-                                                    </small>
-                                                {% endif %}
-                                            </div>
-                                        </div>
+	</div>
+    <div class="row mt-3">
+        <div class="car-container col-10 offset-1">
+            <div class="row">
+                {% for review in reviews %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border border-dark">
+                            <!-- Car Image -->
+                            {% if review.image %}
+                                <a href="{% url 'review_page' review.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ review.image.url }}" alt="{{ review.make }} {{ review.model }}"/>
+                                </a>
+                            {% else %}
+                                <a href="{% url 'review_page' review.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ review.make }} {{ review.model }}"/>
+                                </a>
+                            {% endif %}
+                            <!-- Review Details -->
+                            <div class="card-body pb-0 text-center">
+                                <p class="mb-0 font-weight-bold">{{ review.make }}</p>
+                                <p class="mb-0 font-weight-bold">{{ review.model }}</p>
+                                <p class="mb-0 font-weight-bold">{{ review.year }}</p>
+                                <p class="mb-0">Completed By</p>
+                                <p class="mb-0">{{ review.review_by }}</p>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-center">
+                                <div class="row">
+                                    <div class="col">
+                                        {% if review.brand %}
+                                            <p class="small mt-1 mb-0">
+                                                <a class="text-muted logo-font"
+                                                    href="{% url 'all_reviews' %}?brand={{ review.brand.brand_name }}">
+                                                    <i class="fas fa-tags mr-1"></i>{{ review.brand.brand_name }}
+                                                </a>
+                                            </p>
+                                        {% endif %}
+                                        <!-- Edit & Delete Functions -->
+                                        {% if request.user.is_superuser %}
+                                            <small class="ml-3">
+                                                <a href="{% url 'edit_review' review.id %}">Edit</a> |
+                                                <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                                            </small>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-						{% if forloop.counter|divisibleby:1 %}
-						<div class="col-12 d-sm-none mb-5">
-							<hr>
-						</div>
-						{% endif %}
+                    {% if forloop.counter|divisibleby:1 %}
+                    <div class="col-12 d-sm-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
 
-						{% if forloop.counter|divisibleby:2 %}
-						<div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-							<hr>
-						</div>
-						{% endif %}
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
 
-						{% if forloop.counter|divisibleby:3 %}
-						<div class="col-12 d-none d-lg-block d-xl-none mb-5">
-							<hr>
-						</div>
-						{% endif %}
+                    {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
 
-						{% if forloop.counter|divisibleby:4 %}
-						<div class="col-12 d-none d-xl-block mb-5">
-							<hr>
-						</div>
-						{% endif %}
+                    {% if forloop.counter|divisibleby:4 %}
+                    <div class="col-12 d-none d-xl-block mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
 
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
