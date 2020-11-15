@@ -3,6 +3,7 @@ Testing
 User Stories Testing
 
 Site User:
+
 As a user, I would like to view all and different types of german cars for sale.
 When you go to 'Browse Cars' in the navbar and select 'All Cars', it will take the user to view all the german cars which will achieve the first part of this user story.
 The second part of the user story will be achieved by clicking on 'Browse Cars' again in the navbar and selecting one of the four brands listed in the dropdown which are 'Volkswagen', 'Audi', 'BMW' and 'Mercedes-Benz'. it will take the user to the page with these types of german cars.
@@ -62,9 +63,6 @@ When I complete the fields for email address and submit the form, as expected it
 When I complete the both email fields and both password fields and submit, as expected it won't submit the form and asks to fill in the username field.
 Then, I will complete all the fields in the form and submit it, as expected it will return back to the register page as the password was too short and the password was too common as it was the same as my username.
 Now, I will complete all the fields and make sure my password is at least 8 characters long and not too common and will submit the form and as expected it was submitted properly and page stated a verification email was sent to my email.
-When I log into my email, as expected I find the email to verify my account. 
-A link will appear in the email, when clicked it will take to me to the page confirm my account as expected and then return me to the log in page.
-Now when I log in, I can make purchases and add to the wishlist as expected.
 
 As a user, I would like to be able to easily contact the site and would like different ways to.
 When 'Contact Us' is clicked in the navbar, it will take me to the page where you a collapsible will appear.
@@ -73,31 +71,86 @@ Then, click on the second collapsible 'By Email' and it will open the contact em
 Then, when the third collapsible 'By Post' is clicked, it will open the address to send to and the second collapsible will close as expected.
 
 Account Holder:
+
 As an account holder, I want to be able to receive a registration email so that I can verify the registration of my account.
+When I complete the registration form, a verification email is sent to my email account.
+When I log into my email, as expected I find the email to verify my account. 
+A link will appear in the email, when clicked it will take to me to the page confirm my account as expected and then return me to the log in page.
+Now when I log in, I can make purchases and add to the wishlist as expected.
 
 As an account holder, I want to be able to login and logout of my account
+Logging in, is easily done by clicking on the 'My Account' icon and select login, once on the login page a small form is presented which the user has to fill in with their username and password and then submit. This will log them into their personal account, a personalized message will appear to state they have logged in. 
+They can logout by clicking on the 'My Account' icon and selecting logout which will take them to the logout page and they will just need click on the sign out button to complete logout and a message will appear to state this.
 
 As an account holder, I want to be able to reset my password so that I can re-access my account.
+This can be done by going on the login page and click on the 'Forgot Password?' link, which will require them to fill in their email address and then submit by clicking onto the 'Reset My Password' button. This will send a link to their email address and once they have opened the link they will find two fields to fill in for their password reset and then submit. Once submitted, it will successfullly return them to the login page.
 
 As an account holder, I also want to be view my personal information such as default delivery address and my order history.
+This is achieved for the account holder clicking on the 'My Account' icon when select 'My Account' in the dropdwom, which will take the account holder to the page where the default delivery form and order history is stored. 
 
 As an account holder, I also want to be able to add cars for sale that I wish to buy to a wishlist.
+First, I will go to the listings page and click on the car I am interested in and this will take me to the car's detail page as expectd.
+Then, I will need to click on the 'Add to Wishlist' button and this will take me to the Wishlist with the car added as expected.
+ 
+As an account holder, I also want to be able to remove cars from the wishlist.
+This can be done by going to the Wishlist and selecting the remove button which will remove the car from the wishlist and a notifcation message will appear with what has been removed. When the car is brought by any user it will automatically remove the car from all wishlists.
 
 Customer: 
+
 As an customer, I would like to be able to purchase the german car I am interested in.
+This is achieved by clicking on the 'Buy Now' button in the car's details page or the 'Purchase' button in the wishlist if its in the user's wishlist.
+When on the purchase page, the user will see a purchase form and a small table with the summary of the car they are purchasing.
 
-As a customer, I would to enter my payment so that I can complete my order.
+Purchase Order Form
+First, When I complete the full name field and click on the button to submit the form, it won't submit as expected as the other required fields haven't been completed.
+Then, I will complete the detail fields in the form and submit the form, as expected the form doesn't submit as the delivery required fields haven't been completed.
+Then, When I complete all the required fields in details and delivery and submit the form, as expected it doesn't submit as the payment information hasn't been filled in.
+Then, I will complete all the required fields including the details, delivery and payment and submit the form, and as expected the purchase goes through correctly.
 
-As a customer, I would like to view a order summary when I complete my purchase so I can confirm all the information is correct.
+Note: Due to Stripe's testing features, If you would like to test the payment functionality of this project, please use the following payment details: - Card number: 4242 4242 4242 4242 - CVC: any 3 digit number - Exparation Date: any future date
+
+When a car has been purchased, it will automatically be removed from the site.
+
+As a customer, I would like to view a order summary when I complete my purchase.
+When the purchase has been completed, a order summary will appear with the order number and date, the car purchased , the delivery information and the order total.
 
 As a customer, I would like to receive a confirmation email when I place my order.
+When the purchase has been completed, a message will appear stating a confirmation email has been sent. The confirmation email will include the order number, date, order total and  delivery information.
 
 Store Owner:
-As a store owner, I would like to be able to add german cars and reviews.
 
-As a store owner, I would like to be able to edit german cars and reviews.
+As a store owner, I would like to be able to add german cars.
+First, I will click on the 'My Account' icon and select 'Car Management' in the dropdown.
+Then a add car form will appear where I can add the car.
+I will then select the brand from the dropdown and submit the form and as expected the car won't be added as the required fields haven't been completed.
+Then, I will complete the make field and submit the form and as expected the car wont be added as the other required fields havent been completed.
+Then, I will complete the make and model fields and submit the form and as expected the form won't submit as the other required fields haven't been completed.
+Then, I will complete all the required fields and as expected the car is added.
+When the car adds, it takes me to the car's detail page.
 
-As a store owner, I would like to be able to delete german cars and reviews.
+As a store owner, I would like to be able to edit german cars.
+On the indivdual card in the page with the listings and the car's detail page, there will be a edit button in blue. When this is clicked it will allow the store owner to make any edits they require and then update the car. 
+This will return them to to the updated car's page with a message to state which car has been updated.
+
+As a store owner, I would like to be able to delete german cars.
+On the indivdual card in the page with the listings and the car's detail page, there will be a delete button in red, when clicked it will delete the car from the system and return the store owner back to the all cars page.
+
+As a store owner, I would like to be able to add german cars reviews.
+First, I will click on the 'My Account' icon and select 'Review Management' in the dropdown.
+Then a add review form will appear where I can add the review.
+I will then select the brand from the dropdown and submit the form and as expected the car review won't be added as the required fields haven't been completed.
+Then, I will complete the make field and submit the form and as expected the car review won't be added as the other required fields havent been completed.
+Then, I will complete the make and model fields and submit the form and as expected the form won't submit as the other required fields haven't been completed.
+Then, I will complete the make, model and review by fields and as expected the form won't submit as the last required field haven't been completed.
+Then, I will complete all the required fields and as expected the car review is added.
+When the review is added, it takes me to the car's review page.
+
+As a store owner, I would like to be able to edit german cars reviews.
+On the indivdual card in the page with the reviews and the car's review page, there will be a edit button in blue. When this is clicked it will allow the store owner to make any edits they require and then update the review. 
+This will return them to to the updated car's review page with a message to state which car has been updated
+
+As a store owner, I would like to be able to delete german cars reviews.
+On the indivdual card in the page with the reviews and the car's review page, there will be a delete button in red, when clicked it will delete the review from the system and return the store owner back to the all reviews page.
 
 Automated Testing
 

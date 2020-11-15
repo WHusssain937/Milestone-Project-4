@@ -42,21 +42,27 @@ As an account holder, I also want to be view my personal information such as def
 
 As an account holder, I also want to be able to add cars for sale that I wish to buy to a wishlist.
 
+As an account holder, I also want to be able to remove cars from the wishlist.
+
 ###### Customer Stories 
 As an customer, I would like to be able to purchase the german car I am interested in.
 
-As a customer, I would to enter my payment so that I can complete my order.
-
-As a customer, I would like to view a order summary when I complete my purchase so I can confirm all the information is correct.
+As a customer, I would like to view a order summary.
 
 As a customer, I would like to receive a confirmation email when I place my order.
 
 ###### Store Owner Stories 
-As a store owner, I would like to be able to add german cars and reviews.
+As a store owner, I would like to be able to add german cars.
 
-As a store owner, I would like to be able to edit german cars and reviews.
+As a store owner, I would like to be able to edit german cars.
 
-As a store owner, I would like to be able to delete german cars and reviews.
+As a store owner, I would like to be able to delete german cars.
+
+As a store owner, I would like to be able to add german cars reviews.
+
+As a store owner, I would like to be able to edit german cars reviews.
+
+As a store owner, I would like to be able to delete german cars reviews.
 
 Strategy
 My strategy was to create a site where users can purchase and read reviews about german cars.
