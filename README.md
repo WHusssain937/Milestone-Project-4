@@ -94,6 +94,12 @@ Skeleton
 Surface
 The colors that are used in the website are black and white with white being the dominant background color except in the delivery row and black being the dominant color of most of the text apart from the delivery row and text on the home page. I stuck with this colors as I think it gave the site a professional and efficient look and these are want german car are known for. The font that was used for the site was Gayathri, this was used as it was a professional style and was easily readable. The background image on the home page is of salesman shaking hands with a man and handing over car keys after completing a deal, this image was used as enticement for users to complete a deal to get a german car.
 
+Defensive Design 
+Through production of the site, different defense features were added to protect the site.
+A {% csrf_token %} was added to every form to stop Cross Site Request Forgeries.
+@login_required was added throughout production to many views to make sure that only users authenthicated were able to access this certain pages like making purchases, added to a wishlist or accessing someones personal account.
+To make sure that all requests were getting their expected data, fields were made 'required' in forms and models so that fields were not left blank.
+
 Features
 
 Existing Features
