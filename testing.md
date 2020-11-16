@@ -159,7 +159,7 @@ Automated Testing
 
 Websites & Devices Testing
 
-This site was tested on multiple devices varying different sizes and also on multiple browsers.
+This site was tested on multiple devices varying different sizes and also on multiple browsers successfullly.
 
 Web Browers:
 Google Chrome
@@ -173,6 +173,8 @@ Iphone 8
 Samsung S10 Plus
 Acer Laptop
 Dell Computer
+
+The testing conducted was to register a account, make a purchase and be able to add & remove from the wishlist.
 
 Validation
 
