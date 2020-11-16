@@ -243,6 +243,88 @@ The site is hosted on Heroku.
 AWS S3 Bucket
 The media and css for this site is hosted on AWS.
 
+Database Structure
+
+
+
+Cars App: The models in this app were created to store all the cars on the site.
+
+Brand Model
+Name | Database Key | Field Type | Validation
+Brand Name | brand_name | CharField | max_length=254
+
+Car Model
+Name | Database Key | Field Type | Validation
+Brand Foreign Key | brand | ForeignKey | 'Brand', null=True, blank=True, on_delete=models.SET_NULL
+SKU | sku | CharField | max_length=254, null=True, blank=True
+Make | make | CharField | max_length=254 
+Model | model | CharField | max_length=254
+Year | year | IntergerField | null=True, blank=True
+Mileage | mileage | CharField | max_length=254, null=True, blank=True
+Fuel Type | fuel_type | CharField | max_length=254, null=True, blank=True
+Transmission | transmission | CharField | max_length=254, null=True, blank=True
+Description | description | TextField | null=True, blank=True
+Price | price | DecimalField | max_digits=6, decimal_places=0
+Image URL | image_url | URLField | max_length=1024, null=True, blank=True
+Image | image | ImageField | null=True, blank=True
+For Sale | for_sale | BooleanField | default=True
+
+Purchase App: The model in this app was used to allow the user to make a purchase for a car.
+
+Car_Order Model
+Name | Database Key | Field Type | Validation
+Car | car | ForeignKey | Car, null=False, blank=False, on_delete=models.CASCADE
+User Profile | user_profile | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+Order Number | order_number | CharField | max_length=32, null=False, editable=False
+Full Name | full_name | CharField | max_length=50, null=False, blank=False
+Email Address | email | CharField | max_length=254, null=False, blank=False
+Phone Number | phone_number | CharField | max_length=20, null=False, blank=False
+Country | country | CountryField | blank_label='Country *', null=False, blank=False
+Postcode | postcode | CharField | max_length=20, null=True, blank=True 
+Town or City | town_or_city | CharField | max_length=40, null=False, blank=False 
+Street Address 1 | street_address1 | CharField | max_length=80, null=False, blank=False 
+Street Address 2 | street_address2 | CharField | max_length=80, null=True, blank=True 
+County | county | CharField | max_length=80, null=True, blank=True 
+Date Of Purchase | date_of_purchase | DateTimeField | auto_now_add=True
+Total | total | DecimalField | max_digits=6, decimal_places=0, null=False, default=0 
+Original Purchase | original_purchase | TextField | null=False, blank=False, default=''
+Stripe | stripe_pid | CharField | max_length=254, null=False, blank=False, default='' 
+
+Profile App: The models aim was to retrieve the account holder's default delivery information.
+
+UserProfile Model
+Name | Database Key | Field Type | Validation
+User | user | OnetoOneField | User, on_delete=models.CASCADE
+Phone Number | default_phone_number | CharField | max_length=20, null=True, blank=True
+Street Address 1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+Street Address 2| default_street_address2 | CharField | max_length=80, null=True, blank=True
+Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+County | default_county | CharField | max_length=80, null=True, blank=True
+Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
+Country | default_country | CountryField | blank_label='Country', null=True, blank=True
+
+Wishlist App: 
+
+Wishlist Model
+Name | Database Key | Field Type | Validation
+Car | car | ForeignKey | Car, null=False, blank=False, on_delete=models.CASCADE
+User Profile | user_profile | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True
+
+Review App: The model in this app was created to store all the reviews onto the site.
+
+Review Model
+Name | Database Key | Field Type | Validation
+Brand | brand | ForeignKey | Brand, null=False, blank=False, on_delete=models.CASCADE 
+Make | make | CharField | max_length=254 
+Model | model | CharField | max_length=254
+Year | year | IntegerField | null=True, blank=True
+Advantage | advantage | CharField | max_length=254, null=True, blank=True
+Disadvantage | disadvantage | CharField | max_length=254, null=True, blank=True
+Review By | review_by | CharField | max_length=254
+Car Review | car_review | TextField |
+Image URL | image_url | URLField | max_length=1024, null=True, blank=True 
+Image | image | ImageField | null=True, blank=True
+
 Testing
 
 Deployment
