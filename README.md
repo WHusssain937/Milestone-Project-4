@@ -333,6 +333,46 @@ Testing
 
 Deployment
 
+This site were developed in the gitpod environment. This site is hosted by GitHub, it is directly deployed via the master branch and it was used for version control and commits and then pushed to a repository in Github and also pushed straight to Heroku as well.
+
+Run Locally
+To run locally, You can clone this respository directly in the terminal of the environment you are using for code editing type: git clone Booksmart https://github.com/WHusssain937/Milestone-Project-4. To cut ties with this GitHub repository, type git remote rm origin into the terminal.
+
+Heroku Deployment
+1. First, you will need to register/login to Heroku.
+2. Then, on your dashboard click on the 'New' button to create the app.
+3. Name your app and select your region.
+4. To be able to use the PostgreSQL database for Heroku deployment. Go to 'Resources', search and select it as a free add-on.
+5. After the app has been created, go to settings and click on Reveal Config Variables' button to input the following values.
+Key | Value
+DATABASE_URL | Heroku Postgres Database URL
+SECRET_KEY | Secret Key used for your Django project
+STRIPE_PUBLIC_KEY| Obtained from your Stripe account
+STRIPE_SECRET_KEY| Obtained from your Stripe account
+STRIPE_WH_SECRET| Obtained from your Stripe account
+6. Next, create a requirements.txt file in your gitpod terminal using the following command:  pip3 freeze --local > requirements.txt
+7. Then, in the terminal create a Procfile with the following command: echo web: gunicorn german_whips.wsgi:application > Procfile
+8. Then, in the terminal set up the database with PostgreSQL using the following commands:  python3 manage.py | makemigrations python3 manage.py migrate
+9. You will need to create a superuser to access the admin. First, enter the following: python3 manage.py createsuperuser, then create the username and password for your superuser. 
+10. Now, using the following command, you can test the cloned application to see if it works: python3 manage.py runserver
+11. Commit your changes using the following commands: git add . | git commit -m "Add Message Here!"
+12. In the gitpod terminal, login to Heroku with the following command: heroku login -i and enter your login credentials.
+13. Once logged in, connect your Heroku app to your remote repository using the following command in the terminal: heroku git:remote -a <your app name here> 
+14. Lastly, Push to Heroku with the following command in the terminal: git push heroku master  
+
+Hosting With AWS
+The static and media files for this project are held in AWS S3 Bucket. To host them as well, you will need to create a AWS account and then create your S3 Bucket and make sure you allow public access. 
+The following environment variables will need to added to settings or .env file: 
+USE_AWS (set to True)
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY 
+
+Sending Emails Using Gmail
+To be able to send real emails, you will need to connect to a Gmail account. You will need to create/sign in to your Gmail account and then go to Google Account Security page, now create a two-step authenthication by creating a app password for the Django app. 
+Lastly, you will need to add the following environment variables to your settings or .env file:
+EMAIL_HOST_USER
+EMAIL_HOST_PASS
+
 Credits
 Content
 The text for section Y was copied from the Wikipedia article Z
