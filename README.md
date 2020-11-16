@@ -245,7 +245,11 @@ The media and css for this site is hosted on AWS.
 
 Database Structure
 
-
+In development with Django, I used the SQlite3 database and after deployment to Heroku the PostgreSQL database was used. 
+The reason that a straight to purchase app was used instead of a checkout app was because car prices are in the thousands and it would be incredibly rare to buy two cars at one time.   
+When every app and their models were added, the migrations commands were used to intially create the model package(python manage.py makemigrations) and then the table in the database(python manage.py migrate).
+This project relied on Django default user model for authorisation, as one of the requirements in the were separating features by anonymous users, users in session and superusers.
+The models were added to make sure they were not too many alterations to the table and databases through migrating, but throughout development fields some fields needed to be added, adjusted or deleted., 
 
 Cars App: The models in this app were created to store all the cars on the site.
 
