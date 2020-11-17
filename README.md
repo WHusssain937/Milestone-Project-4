@@ -200,10 +200,13 @@ Python3 is used as programming language,and is used to run the backend of the si
 **Javascript**
 This language was used to function the sort dropdown, used for stripe purposes and more.
 
-###### Librarys & Frameworks
+###### Librarys, Frameworks & Tools
 
 **Django**
 This is the web framework used.
+
+**Bootstrap**
+This was used to make the site responsive and customize the HTML like the navbar.
 
 **JQuery**
 This library was used to allow the bootstrap functions to work such as the notifcation toasts and the collapsible.
@@ -211,20 +214,34 @@ This library was used to allow the bootstrap functions to work such as the notif
 **Stripe**
 This was used for functioning my payment method in the purchase app.
 
+**Jinja** 
+This was used as the templating language for python.
+
 **SQlite3**
-This was the database used in production in gitpod.
+This was the database used in production in Gitpod.
 
 **PostgreSQL**
 This was the database used in deployment on Heroku.
-
-**Jinja** 
-This was used as the templating language for python.
 
 **AllAuth**
 This was used for to create registration, account management and authenthication.
 
 **Crispy-Forms** 
 This was used to easily build the forms for my site.
+
+**Boto3**
+This is the  Amazon Web Services (AWS) SDK for Python. It allows developers to create, configure, and manage AWS services, like S3.
+
+**Gunicorn**
+A Python WSGI HTTP Server to enable deployment to Heroku
+
+**Psycopg2**
+This will allow the PostgreSQL database to function with Django.
+
+**Pillow**
+This will added image abilities to the python interpreter.
+
+###### Others
 
 **Font Awesome**
 This icon library was used in my project to place icons like the 'My Account' icon and the footer social icons.
@@ -238,22 +255,25 @@ The site is hosted on Heroku.
 **AWS S3 Bucket**
 The media and css for this site is hosted on AWS.
 
-Database Structure
+#### Database Structure
 
 In development with Django, I used the SQlite3 database and after deployment to Heroku the PostgreSQL database was used. 
-The reason that a straight to purchase app was used instead of a checkout app was because car prices are in the thousands and it would be incredibly rare to buy two cars at one time.   
+The reason that a straight to purchase app was used instead of a checkout app was because car prices are in the thousands and it would be incredibly rare to buy two cars at one time. 
 When every app and their models were added, the migrations commands were used to intially create the model package(python manage.py makemigrations) and then the table in the database(python manage.py migrate).
+
 This project relied on Django default user model for authorisation, as one of the requirements in the were separating features by anonymous users, users in session and superusers.
 The models were added to make sure they were not too many alterations to the table and databases through migrating, but throughout development fields some fields needed to be added, adjusted or deleted., 
 
-Cars App: The models in this app were created to store all the cars on the site.
+**Cars App**: The models in this app were created to store all the cars on the site.
 
-Brand Model
+**Brand Model**
 Name | Database Key | Field Type | Validation
+---- | ------------ | ---------- | --------- 
 Brand Name | brand_name | CharField | max_length=254
 
-Car Model
+**Car Model**
 Name | Database Key | Field Type | Validation
+---- | ------------ | ---------- |-----------
 Brand Foreign Key | brand | ForeignKey | 'Brand', null=True, blank=True, on_delete=models.SET_NULL
 SKU | sku | CharField | max_length=254, null=True, blank=True
 Make | make | CharField | max_length=254 
@@ -268,10 +288,11 @@ Image URL | image_url | URLField | max_length=1024, null=True, blank=True
 Image | image | ImageField | null=True, blank=True
 For Sale | for_sale | BooleanField | default=True
 
-Purchase App: The model in this app was used to allow the user to make a purchase for a car.
+**Purchase App:** The model in this app was used to allow the user to make a purchase for a car.
 
-Car_Order Model
+**Car_Order Model**
 Name | Database Key | Field Type | Validation
+---- | ------------ | ---------- | ----------
 Car | car | ForeignKey | Car, null=False, blank=False, on_delete=models.CASCADE
 User Profile | user_profile | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
 Order Number | order_number | CharField | max_length=32, null=False, editable=False
@@ -289,10 +310,11 @@ Total | total | DecimalField | max_digits=6, decimal_places=0, null=False, defau
 Original Purchase | original_purchase | TextField | null=False, blank=False, default=''
 Stripe | stripe_pid | CharField | max_length=254, null=False, blank=False, default='' 
 
-Profile App: The models aim was to retrieve the account holder's default delivery information.
+**Profile App:** The models aim was to retrieve the account holder's default delivery information.
 
-UserProfile Model
+**UserProfile Model**
 Name | Database Key | Field Type | Validation
+---- | ------------ | ---------- | ----------
 User | user | OnetoOneField | User, on_delete=models.CASCADE
 Phone Number | default_phone_number | CharField | max_length=20, null=True, blank=True
 Street Address 1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
@@ -302,17 +324,19 @@ County | default_county | CharField | max_length=80, null=True, blank=True
 Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
 Country | default_country | CountryField | blank_label='Country', null=True, blank=True
 
-Wishlist App: 
+**Wishlist App:** 
 
-Wishlist Model
+**Wishlist Model**
 Name | Database Key | Field Type | Validation
+---- | ------------ | ---------- | ----------
 Car | car | ForeignKey | Car, null=False, blank=False, on_delete=models.CASCADE
 User Profile | user_profile | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True
 
-Review App: The model in this app was created to store all the reviews onto the site.
+**Review App:** The model in this app was created to store all the reviews onto the site.
 
-Review Model
+**Review Model**
 Name | Database Key | Field Type | Validation
+---- | ------------ | ---------- | -----------
 Brand | brand | ForeignKey | Brand, null=False, blank=False, on_delete=models.CASCADE 
 Make | make | CharField | max_length=254 
 Model | model | CharField | max_length=254
@@ -324,22 +348,24 @@ Car Review | car_review | TextField |
 Image URL | image_url | URLField | max_length=1024, null=True, blank=True 
 Image | image | ImageField | null=True, blank=True
 
-Testing
+#### Testing
+Click here for Testing.
 
-Deployment
+#### Deployment
 
 This site were developed in the gitpod environment. This site is hosted by GitHub, it is directly deployed via the master branch and it was used for version control and commits and then pushed to a repository in Github and also pushed straight to Heroku as well.
 
-Run Locally
+##### Run Locally
 To run locally, You can clone this respository directly in the terminal of the environment you are using for code editing type: git clone Booksmart https://github.com/WHusssain937/Milestone-Project-4. To cut ties with this GitHub repository, type git remote rm origin into the terminal.
 
-Heroku Deployment
+##### Heroku Deployment
 1. First, you will need to register/login to Heroku.
 2. Then, on your dashboard click on the 'New' button to create the app.
 3. Name your app and select your region.
 4. To be able to use the PostgreSQL database for Heroku deployment. Go to 'Resources', search and select it as a free add-on.
 5. After the app has been created, go to settings and click on Reveal Config Variables' button to input the following values.
 Key | Value
+--- | -----
 DATABASE_URL | Heroku Postgres Database URL
 SECRET_KEY | Secret Key used for your Django project
 STRIPE_PUBLIC_KEY| Obtained from your Stripe account
@@ -355,17 +381,17 @@ STRIPE_WH_SECRET| Obtained from your Stripe account
 13. Once logged in, connect your Heroku app to your remote repository using the following command in the terminal: heroku git:remote -a <your app name here> 
 14. Lastly, Push to Heroku with the following command in the terminal: git push heroku master  
 
-Hosting With AWS
+###### Hosting With AWS
 The static and media files for this project are held in AWS S3 Bucket. To host them as well, you will need to create a AWS account and then create your S3 Bucket and make sure you allow public access. 
 The following environment variables will need to added to settings or .env file: 
 USE_AWS (set to True)
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY 
 
-Sending Emails Using Gmail
+###### Sending Emails Using Gmail
 To be able to send real emails, you will need to connect to a Gmail account. You will need to create/sign in to your Gmail account and then go to Google Account Security page, now create a two-step authenthication by creating a app password for the Django app. 
 Lastly, you will need to add the following environment variables to your settings or .env file:
-EMAIL_HOST_USER
+EMAIL_HOST_USER 
 EMAIL_HOST_PASS
 
 Credits
