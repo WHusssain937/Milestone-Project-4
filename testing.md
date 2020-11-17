@@ -1,6 +1,6 @@
 Testing 
 
-User Stories Testing
+User Stories & Manual Testing
 
 Site User:
 
@@ -155,11 +155,25 @@ This will return them to to the updated car's review page with a message to stat
 As a store owner, I would like to be able to delete german cars reviews.
 On the indivdual card in the page with the reviews and the car's review page, there will be a delete button in red, when clicked it will delete the review from the system and return the store owner back to the all reviews page.
 
-Automated Testing
+Authentication
+The site has been fully secured by only allowing superusers to access pages to perform CUD(create, update and delete) functionality. If a logged in user attempted to enter these pages the site will return them to the home page with message stating that only authorised users were allowed.
+hrough production of the site, different defense features were added to protect the site. A {% csrf_token %} was added to every form to stop Cross Site Request Forgeries.
+@login_required was added throughout production to many views to make sure that only users authenthicated were able to access this certain pages like making purchases, added to a wishlist or accessing someones personal account.
+To make sure that all requests were getting their expected data, fields were made 'required' in forms and models so that fields were not left blank.
+
+Bugs Found
+
+During development and testing the website, these were the bugs found:
+
+When entering a query in the review search box and getting only one review or when on a single brand reviews page, the review card's displayed were too thin and not displaying as normal. The bug was that a </div> was missing, once this was rectified the review card's were returning as normal.
+
+During testing, the footer was being raised on multiple pages that didnt fill the page content. To rectify this, changing the min-height from 100% to 100vh fixed this issue and kept the footer at the bottom on all pages.
+
+Another bug found during testing, was the no-image file wasn't displaying when adding a car to the site and not adding an image for the car. To recify this, an / was added to the end of 'media' in the MEDIAFILES_LOCATION variable in setting.py and this rectified the bug and the no-image file is now displaying when adding a car or review.
 
 Websites & Devices Testing
 
-This site was tested on multiple devices varying different sizes and also on multiple browsers successfullly.
+This site was tested on multiple devices varying different screen sizes and also on multiple browsers successfullly. A small issue that was found that on mobile view the table was fitting on screen in the wishlist due to the options button, to fix this I have make the font size of the buttons smaller and this fixed the buttons to fit.
 
 Web Browers:
 Google Chrome
