@@ -114,7 +114,7 @@ When on the purchase page, the user will see a purchase form and a small table w
 ###### Stripe
 * These payments are also visible on the [Stripe Dashbord page](https://dashboard.stripe.com/payments). Verify in Stripe account that the payment was successful and that the webhooks were handled successfull
 
-Note: Due to Stripe's testing features, If you would like to test the payment functionality of this project, please use the following payment details: - Card number: 4242 4242 4242 4242 - CVC: any 3 digit number - Exparation Date: any future date
+> Note: Due to Stripe's testing features, If you would like to test the payment functionality of this project, please use the following payment details: - Card number: 4242 4242 4242 4242 - CVC: any 3 digit number - Exparation Date: any future date
 
 ###### As a customer, I would like to view a order summary when I complete my purchase.
 When the purchase has been completed, a order summary will appear with the order number and date, the car purchased , the delivery information and the order total.

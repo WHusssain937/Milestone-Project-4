@@ -89,8 +89,9 @@ The site's layout is as follows:
 
 Links for wireframes for this project below:
 
-[]()
-[]()
+[Mobile & Tablet View](https://github.com/WHusssain937/Milestone-Project-4/tree/master/wireframes/mobile_tablet-view)
+
+[PC & Laptop View](https://github.com/WHusssain937/Milestone-Project-4/tree/master/wireframes/pc_laptop-view)
 
 ##### Surface
 The colors that are used in the website are black and white with white being the dominant background color except in the delivery row and black being the dominant color of most of the text apart from the delivery row and text on the home page. I stuck with this colors as I think it gave the site a professional and efficient look and these are want german car are known for. The font that was used for the site was Gayathri, this was used as it was a professional style and was easily readable. The background image on the home page is of salesman shaking hands with a man and handing over car keys after completing a deal, this image was used as enticement for users to complete a deal to get a german car.
@@ -366,7 +367,7 @@ Follow the instruction below to clone this project to your local machine:
 
 1. First, open the Integrated Development Environment (IDE) and go to the terminal. 
 2. Enter the following command: 
-> git clone https://github.com/WHusssain937/Milestone-Project-4
+> <p>git clone https://github.com/amybru/mug_shots</p>
 3. Create a requirements file to install the required modules: **pip3 install -r requirements.txt**
 4. Add the environment variables, if you are using gitpod then the variables can be put in the settings or you can create a .env file. Make sure to add the .env file to the .gitignore file so that the database information isn't viewable to others and to keep the values safe. Add these values:
 
