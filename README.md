@@ -4,11 +4,11 @@
 
 #### UX
 
-##### User stories
+**User stories**
 
-**Below I have listed the user stories for my final milestone project.** 
+Below I have listed the user stories for my final milestone project. 
 
-###### Site User Stories 
+##### Site User Stories 
 As a user, I would like to view all and different types of german cars for sale.
 
 As a user, I would like to sort the cars so that I can view the cars in different order such as make, model, price and year.
@@ -29,7 +29,7 @@ As a user, I would like to register my own account so that I can make purchases 
 
 As a user, I would like to be able to easily contact the site and would like different ways to.
 
-###### Account Holder Stories 
+##### Account Holder Stories 
 As an account holder, I want to be able to receive a registration email so that I can verify the registration of my account.
 
 As an account holder, I want to be able to login and logout of my account
@@ -42,14 +42,14 @@ As an account holder, I also want to be able to add cars for sale that I wish to
 
 As an account holder, I also want to be able to remove cars from the wishlist.
 
-###### Customer Stories 
+##### Customer Stories 
 As an customer, I would like to be able to purchase the german car I am interested in.
 
 As a customer, I would like to view a order summary.
 
 As a customer, I would like to receive a confirmation email when I place my order.
 
-###### Store Owner Stories 
+##### Store Owner Stories 
 As a store owner, I would like to be able to add german cars.
 
 As a store owner, I would like to be able to edit german cars.
@@ -92,7 +92,7 @@ The colors that are used in the website are black and white with white being the
 
 #### Features
 
-**Existing Features**
+##### Existing Features
 
 ###### Bootstrap First Navbar
 The first navbar will include the logo on the left, the search box for cars in the middle and on th right the 'My Account' dropdown.
@@ -169,7 +169,7 @@ The links in the footer will allow the user to visit the app's social media plat
 ###### Bootstrap Notifcations Toasts 
 The notifications would appear when the user have made a purchase, added to their wishlist and more.
 
-**Store Owner Features**
+##### Store Owner Features
 
 ###### Car/Review Management
 These pages will display the add car/review forms for the store owner to add cars/reviews to the site.
@@ -179,80 +179,80 @@ When the store owner clicks the edit link on a listing or review, it will take t
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
-**Features Left to Implement**
+##### Features Left to Implement
 
 ###### Bootstrap Carousel
 In future projects, I would like to add a carousel instead of a single image so that many images of the cars can be uploaded and viewed by the user.
 
 #### Technologies Used
 
-**Languages**
+##### Languages
 
-###### (HTML)[https://developer.mozilla.org/en-US/docs/Web/HTML] 
+###### [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) 
 This language was used to build the site and input content.
 
-###### (CSS)[https://developer.mozilla.org/en-US/docs/Glossary/CSS]
+###### [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS)
 This was used to style to website and for media queries.
 
-###### (Python)[https://www.python.org/about/]
+###### [Python](https://www.python.org/about/)
 Python3 is used as programming language,and is used to run the backend of the site and its functions.
 
-###### (Javascript)[https://developer.mozilla.org/en-US/docs/Glossary/JavaScript]
+###### [Javascript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
 This language was used to function the sort dropdown, used for stripe purposes and more.
 
-**Librarys, Frameworks & Tools**
+##### Librarys, Frameworks & Tools
 
-###### (Django)[https://www.djangoproject.com/]
+###### [Django](https://www.djangoproject.com/)
 This is the web framework used.
 
-###### (Bootstrap)[https://getbootstrap.com/]
+###### [Bootstrap](https://getbootstrap.com/)
 This was used to make the site responsive and customize the HTML like the navbar.
 
-###### (JQuery)[https://jquery.com/]
+###### [JQuery](https://jquery.com/)
 This library was used to allow the bootstrap functions to work such as the notifcation toasts and the collapsible.
 
-###### (Stripe)[https://stripe.com/gb]
+###### [Stripe](https://stripe.com/gb)
 This was used for functioning my payment method in the purchase app.
 
-###### (Jinja)[https://jinja.palletsprojects.com/en/2.11.x/]
+###### [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 This was used as the templating language for python.
 
-###### (SQlite3)[https://www.sqlite.org/index.html]
+###### [SQlite3](https://www.sqlite.org/index.html)
 This was the database used in production in Gitpod.
 
-###### (PostgreSQL)[https://www.postgresql.org/]
+###### [PostgreSQL](https://www.postgresql.org/)
 This was the database used in deployment on Heroku.
 
-###### (Crispy-Forms)[https://django-crispy-forms.readthedocs.io/en/latest/] 
+###### [Crispy-Forms](https://django-crispy-forms.readthedocs.io/en/latest/) 
 This was used to easily build the forms for my site.
 
-###### (Boto3)[https://pypi.org/project/boto3/]
+###### [Boto3](https://pypi.org/project/boto3/)
 This is the  Amazon Web Services (AWS) SDK for Python. It allows developers to create, configure, and manage AWS services, like S3.
 
-###### (Gunicorn)[https://gunicorn.org/]
+###### [Gunicorn](https://gunicorn.org/)
 A Python WSGI HTTP Server to enable deployment to Heroku
 
-###### (Psycopg2)[https://pypi.org/project/psycopg2-binary/]
+###### [Psycopg2](https://pypi.org/project/psycopg2-binary/)
 This will allow the PostgreSQL database to function with Django.
 
-###### (Pillow)[https://pillow.readthedocs.io/en/stable/]
+###### [Pillow](https://pillow.readthedocs.io/en/stable/)
 This will added image abilities to the python interpreter.
 
-###### (AllAuth)[https://django-allauth.readthedocs.io/en/latest/installation.html]
+###### [AllAuth](https://django-allauth.readthedocs.io/en/latest/installation.html)
 This was used for to create registration, account management and authenthication.
 
-**Others**
+##### Others
 
-###### (Font Awesome)[https://fontawesome.com/]
+###### [Font Awesome](https://fontawesome.com/)
 This icon library was used in my project to place icons like the 'My Account' icon and the footer social icons.
 
-###### (Google Fonts)[https://fonts.google.com/]
+###### [Google Fonts](https://fonts.google.com/)
 This was used to include the font for my site 'Gayathri'.
 
-###### (Heroku)[https://dashboard.heroku.com/]
+###### [Heroku](https://dashboard.heroku.com/)
 The site is hosted on Heroku.
 
-###### (AWS S3 Bucket)[https://aws.amazon.com/s3/]
+###### [AWS S3 Bucket](https://aws.amazon.com/s3/)
 The media and css for this site is hosted on AWS.
 
 #### Database Structure
@@ -266,12 +266,12 @@ The models were added to make sure they were not too many alterations to the tab
 
 **Cars App**: The models in this app were created to store all the cars on the site.
 
-**Brand Model**
+##### Brand Model
 Name | Database Key | Field Type | Validation
 ---- | ------------ | ---------- | --------- 
 Brand Name | brand_name | CharField | max_length=254
 
-**Car Model**
+##### Car Model
 Name | Database Key | Field Type | Validation
 ---- | ------------ | ---------- |-----------
 Brand Foreign Key | brand | ForeignKey | 'Brand', null=True, blank=True, on_delete=models.SET_NULL
@@ -290,7 +290,7 @@ For Sale | for_sale | BooleanField | default=True
 
 **Purchase App:** The model in this app was used to allow the user to make a purchase for a car.
 
-**Car_Order Model**
+##### Car_Order Model
 Name | Database Key | Field Type | Validation
 ---- | ------------ | ---------- | ----------
 Car | car | ForeignKey | Car, null=False, blank=False, on_delete=models.CASCADE
@@ -312,7 +312,7 @@ Stripe | stripe_pid | CharField | max_length=254, null=False, blank=False, defau
 
 **Profile App:** The models aim was to retrieve the account holder's default delivery information.
 
-**UserProfile Model**
+##### UserProfile Model
 Name | Database Key | Field Type | Validation
 ---- | ------------ | ---------- | ----------
 User | user | OnetoOneField | User, on_delete=models.CASCADE
@@ -326,7 +326,7 @@ Country | default_country | CountryField | blank_label='Country', null=True, bla
 
 **Wishlist App:** 
 
-**Wishlist Model**
+##### Wishlist Model
 Name | Database Key | Field Type | Validation
 ---- | ------------ | ---------- | ----------
 Car | car | ForeignKey | Car, null=False, blank=False, on_delete=models.CASCADE
@@ -334,7 +334,7 @@ User Profile | user_profile | ForeignKey | UserProfile, on_delete=models.SET_NUL
 
 **Review App:** The model in this app was created to store all the reviews onto the site.
 
-**Review Model**
+##### Review Model
 Name | Database Key | Field Type | Validation
 ---- | ------------ | ---------- | -----------
 Brand | brand | ForeignKey | Brand, null=False, blank=False, on_delete=models.CASCADE 
@@ -349,7 +349,7 @@ Image URL | image_url | URLField | max_length=1024, null=True, blank=True
 Image | image | ImageField | null=True, blank=True
 
 #### Testing
-Click here for Testing.
+Click here for [Testing](https://github.com/WHusssain937/Milestone-Project-4/blob/master/testing.md).
 
 #### Deployment
 This site were developed in the gitpod environment. This site is hosted by GitHub, it is directly deployed via the master branch and it was used for version control and commits and then pushed to a repository in Github and also pushed straight to Heroku as well.
@@ -360,21 +360,31 @@ Follow the instruction below to clone this project to your local machine:
 **Instructions**
 
 1. First, open the Integrated Development Environment (IDE) and go to the terminal. 
-2. Enter the following command: **git clone https://github.com/WHusssain937/Milestone-Project-4**
+2. Enter the following command: 
+> git clone https://github.com/WHusssain937/Milestone-Project-4
 3. Create a requirements file to install the required modules: **pip3 install -r requirements.txt**
 4. Add the environment variables, if you are using gitpod then the variables can be put in the settings or you can create a .env file. Make sure to add the .env file to the .gitignore file so that the database information isn't viewable to others and to keep the values safe. Add these values:
 
 > SECRET_KEY
+
 > STRIPE_PUBLIC_KEY
+
 > STRIPE_SECRET_KEY
+
 > STRIPE_WH_SECRET
+
 > DATABASE_URL
 
 5. To set up the Django SQlite3 tables that are needed for this project, please use the following commands in the terminal:
 > python3 manage.py makemigrations
+
 > python3 manage.py migrate
-6. Create a superuser so you can work as an admin, add this command to the terminal: **python3 manage.py createsuperuser**, then create a username and password for the superuser.
-7. Finally, you can test the cloned application by using the following command: **python3 manage.py runserver**
+
+6. Create a superuser so you can work as an admin, add this command to the terminal, then create a username and password for the superuser.
+> python3 manage.py createsuperuser
+
+7. Finally, you can test the cloned application by using the following command: 
+> python3 manage.py runserver
 
 ##### Heroku Deployment
 1. First, you will need to register/login to Heroku.
@@ -391,29 +401,53 @@ STRIPE_PUBLIC_KEY| Obtained from your Stripe account
 STRIPE_SECRET_KEY| Obtained from your Stripe account
 STRIPE_WH_SECRET| Obtained from your Stripe account
 
-6. Next, create a requirements.txt file in your gitpod terminal using the following command:  **pip3 freeze --local > requirements.txt**
-7. Then, in the terminal create a Procfile with the following command: **echo web: gunicorn german_whips.wsgi:application > Procfile**
-8. Then, in the terminal set up the database with PostgreSQL using the following commands:  **python3 manage.py | makemigrations python3 manage.py migrate**
-9. You will need to create a superuser to access the admin. First, enter the following: **python3 manage.py createsuperuser**, then create the username and password for your superuser. 
-10. Now, using the following command, you can test the cloned application to see if it works: **python3 manage.py runserver**.
-11. Commit your changes using the following commands: **git add . | git commit -m "Add Message Here!"**
-12. In the gitpod terminal, login to Heroku with the following command: **heroku login -i** and enter your login credentials.
-13. Once logged in, connect your Heroku app to your remote repository using the following command in the terminal: **heroku git:remote -a <your app name here>** 
-14. Lastly, Push to Heroku with the following command in the terminal: **git push heroku master**  
+6. Next, create a requirements.txt file in your gitpod terminal using the following command:
+> pip3 freeze --local > requirements.txt
 
-###### Hosting With AWS
+7. Then, in the terminal create a Procfile with the following command: 
+> echo web: gunicorn german_whips.wsgi:application > Procfile
+
+8. Then, in the terminal set up the database with PostgreSQL using the following commands:  
+> python3 manage.py makemigrations 
+
+> python3 manage.py migrate
+
+9. You will need to create a superuser to access the admin. First, enter the following:, then create the username and password for your superuser.
+> python3 manage.py createsuperuser
+
+10. Now, using the following command, you can test the cloned application to see if it works: 
+> python3 manage.py runserver
+
+11. Commit your changes using the following commands: 
+> git add .  
+
+> git commit -m "Add Message Here!"
+
+12. In the gitpod terminal, login to Heroku with the following command: and enter your login credentials.
+> heroku login -i 
+
+13. Once logged in, connect your Heroku app to your remote repository using the following command in the terminal: 
+> heroku git:remote -a <your app name here>
+
+14. Lastly, Push to Heroku with the following command in the terminal: 
+> git push heroku master  
+
+##### Hosting With AWS
 The static and media files for this project are held in AWS S3 Bucket. To host them as well, you will need to create a AWS account and then create your S3 Bucket and make sure you allow public access. 
 The following environment variables will need to added to settings or .env file: 
 
 > USE_AWS (set to True)
+
 > AWS_ACCESS_KEY_ID
+
 > AWS_SECRET_ACCESS_KEY 
 
-###### Sending Emails Using Gmail
+##### Sending Emails Using Gmail
 To be able to send real emails, you will need to connect to a Gmail account. You will need to create/sign in to your Gmail account and then go to Google Account Security page, now create a two-step authenthication by creating a app password for the Django app. 
 Lastly, you will need to add the following environment variables to your settings or .env file:
 
-> EMAIL_HOST_USER 
+> EMAIL_HOST_USER
+ 
 > EMAIL_HOST_PASS
 
 Credits
