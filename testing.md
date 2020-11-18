@@ -190,7 +190,9 @@ This site was tested on multiple devices varying different screen sizes and also
 ###### Devices:
 * Iphone 7
 * Iphone 8
+* Iphone 11
 * Samsung S10 Plus
+* Samsung Tablet
 * Acer Laptop
 * Dell Computer
 

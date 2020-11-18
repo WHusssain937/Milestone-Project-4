@@ -1,6 +1,18 @@
 ## German Whips
 
-#### My final milestone project is based on selling german cars and browsing through reviews about the newest german cars.
+My final milestone project is based on selling german cars and browsing through reviews about the newest german cars. This site brings together all the aspects of the Full Stack Developer Course and is made with Django to create a functioning e-commerce site.
+
+If you would like to test the payment aspect of the project, please use the following:
+* Card number: 4242 4242 4242 4242
+* CVC: Any 3 digit numbers
+* Expiration Date: Any future date
+* Address: any address details
+
+To test the site as a superuser, you can use the following credentials to login:
+* Username: tester
+* Password: test0203
+
+View Deployed Site Here - [German Whips](https://german-whips.herokuapp.com/)
 
 #### UX
 
@@ -456,12 +468,34 @@ Lastly, you will need to add the following environment variables to your setting
 
 >EMAIL_HOST_PASS
 
-Credits
-Content
-The text for section Y was copied from the Wikipedia article Z
+#### Credits
 
-Media
-The photos used in this site were obtained from ...
+##### Content
 
-Acknowledgements
-I received inspiration for this project from X
+###### Cars 
+The content on the cars detail pages came from [Cazoo](https://www.cazoo.co.uk/).
+
+###### Reviews
+The content on the reviews pages came from [Honest John](https://www.honestjohn.co.uk/).
+
+##### Media
+
+###### Cars 
+The images on the cars detail pages came from [Cazoo](https://www.cazoo.co.uk/).
+
+###### Reviews
+The images on the reviews pages came from [Honest John](https://www.honestjohn.co.uk/).
+
+##### Wireframe
+The wireframes were created on [Balsamiq](https://balsamiq.com/).
+
+###### Code
+Several apps including the code are inspired by the Boutique Ado mini project from Code Institute. The tutorial videos helped me create many of the apps for this project such as the cars app.
+
+##### Acknowledgements
+I would like to thank the following people for the help they provided:
+* My menter Dick Vlannderen for helping guide me through this in our sessions.
+* The tutors at Code Institute for being patience and extremely helpful throughout the project.
+
+
+> Note: This project was created for educational purposes only as 'German Whips' is a fictional site.
