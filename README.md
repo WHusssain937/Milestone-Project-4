@@ -15,26 +15,27 @@ To test the site as a superuser, you can use the following credentials to login:
 View Deployed Site Here - [German Whips](https://german-whips.herokuapp.com/)
 
 #### Table Of Contents
-1 [UX](#ux)
+- [UX](#ux)
   * [User stories](#user-stories)
   * [Strategy](#strategy)
   * [Scope](#scope)
   * [Structure](#structure)
   * [Skeleton](#skeleton)
   * [Surface](#surface)
-2 [Features](#features)
+- [Features](#features)
   * [Existing Features](#existing-features)
   * [Store Owner Features](#store-owner-features)
   * [Features Left to Implement](#features-left-to-implement)
-3 [Technologies Used](#technologies-used)
+- [Technologies Used](#technologies-used)
   * [Languages](#languages)
   * [Librarys, Frameworks & Tools](#librarys--frameworks---tools)
   * [Others](#others)
-4 [Database Structure](#database-structure)
-5 [Testing](#testing)
-6 [Deployment](#deployment)
-7 [Credits](#credits)
-8 [Acknowledgements](#acknowledgements)
+- [Database Structure](#database-structure)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
 
 #### UX
 
