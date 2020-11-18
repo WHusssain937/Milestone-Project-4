@@ -241,7 +241,7 @@ Python3 is used as programming language,and is used to run the backend of the si
 ###### [Javascript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
 This language was used to function the sort dropdown, used for stripe purposes and more.
 
-##### Librarys, Frameworks & Tools
+##### Libraries, Frameworks & Tools
 
 ###### [Django](https://www.djangoproject.com/)
 This is the web framework used.
@@ -259,7 +259,7 @@ This was used for functioning my payment method in the purchase app.
 This was used as the templating language for python.
 
 ###### [SQlite3](https://www.sqlite.org/index.html)
-This was the database used in production in Gitpod.
+This was the database used in development in Gitpod.
 
 ###### [PostgreSQL](https://www.postgresql.org/)
 This was the database used in deployment on Heroku.
@@ -393,7 +393,7 @@ Image | image | ImageField | null=True, blank=True
 Click here for [Testing](https://github.com/WHusssain937/Milestone-Project-4/blob/master/testing.md).
 
 #### Deployment
-This site were developed in the gitpod environment. This site is hosted by GitHub, it is directly deployed via the master branch and it was used for version control and commits and then pushed to a repository in Github and also pushed straight to Heroku as well.
+This site was developed in the gitpod environment. This site is hosted by GitHub, it is directly deployed via the master branch and it was used for version control and commits and then pushed to a repository in Github and also pushed straight to Heroku as well.
 
 ##### Run Locally
 Follow the instruction below to clone this project to your local machine:
@@ -517,7 +517,7 @@ Several apps including the code are inspired by the Boutique Ado mini project fr
 
 ##### Acknowledgements
 I would like to thank the following people for the help they provided:
-* My menter Dick Vlannderen for helping guide me through this in our sessions.
+* My menter Dick Vlaanderen for helping guide me through this in our sessions.
 * The tutors at Code Institute for being patience and extremely helpful throughout the project.
 
 
