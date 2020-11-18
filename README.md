@@ -92,167 +92,167 @@ The colors that are used in the website are black and white with white being the
 
 #### Features
 
-##### Existing Features
+**Existing Features**
 
-**Bootstrap First Navbar**
+###### Bootstrap First Navbar
 The first navbar will include the logo on the left, the search box for cars in the middle and on th right the 'My Account' dropdown.
 
-**Logo**
+###### Logo
 When click on the logo 'German Whips', it will return the user to the home page.
 
-**Navbar Search Box**
+###### Navbar Search Box
 This search box will allow the user to search for queries about the cars they would like to browse.
 
-**'My Account' Dropdown**
+###### 'My Account' Dropdown
 This dropdown will allow the user to register or login to their account and after logging in will show the functions that the user has access to in their account such as their own wishlist.
 
-**Bootstrap Second Navbar**
+###### Bootstrap Second Navbar
 The links in the navbar and two dropdowns will take the user to the page they require.
 
-**Bootstrap Mobile Nav**
+###### Bootstrap Mobile Nav
 When on a smaller device such as a tablet or mobile, the mobile nav will appear. There will be a search icon that when clicked will dropdown the search box instead and the hamburger icon when clicked will open the second navbar
 
-**'Browse Now' Button**
+###### 'Browse Now' Button
 When clicked, it will take the user to the page dislaying all cars for sale.
 
-**Listings Count**
+###### Listings Count
 This will display how many cars are displaying and when a search query is made, the number of cars found.
 
-**Review Count**
+###### Review Count
 This will display how many reviews are displaying and when a search query is made, the number of reviews found.
 
-**Cars Sort Dropdown**
+###### Cars Sort Dropdown
 This will allow the user to sort the cars by (A-Z) or (Z-A) for the make or model and they can sort the price from low to high or high to low. They can also sort the year from new to old or old to new. 
 
-**Reviews Sort Dropdown**
+###### Reviews Sort Dropdown
 This will allow the user to sort the reviews by (A-Z) or (Z-A) for the make or model and they can sort the year from new to old or old to new. 
 
-**Reviews Search Box**
+###### Reviews Search Box
 This search box will allow the user to search for queries about the reviews they would like to browse through.
 
-**Listing Card**
+###### Listing Card
 When one of the car listings is clicked, it will take the user to the car detailed page of that listing.
 
-**Review Card**
+###### Review Card
 When one of the review listings is clicked, it will take the user to that review.
 
-**Bootstrap Contact Collapsible**
+###### Bootstrap Contact Collapsible
 When an collapsible is clicked, it will open the contact information for the user.
 
-**Login/Register Forms**
+###### Login/Register Forms
 These forms will allow the user to register an account and log in their account.
 
-**'Buy Now' Button**
+###### 'Buy Now' Button
 This button will take the user to the purchase form to buy the car.
 
-**'Add to Wishlist' Button**
+###### 'Add to Wishlist' Button
 This button will added the car to the user's wishlist.
 
-**Purchase Form**
+###### Purchase Form
 This form will allow the user to fill in their delivery details and payment information to complete their purchase.
 
-**Save Info Checkbox**
+###### Save Info Checkbox
 This checkbox in the purchase form when clicked will save the user delivery information to their account for future purchases.
 
-**Default Delivery Form**
+###### Default Delivery Form
 This form is where the user's delivery information will be stored, they can update it when they like and the information will appear in the purchase form.
 
-**Order History**
+###### Order History
 This will display the user's purchase history when they place them so they know what they have bought.
 
-**Wishlist Options**
+###### Wishlist Options
 The 'Remove' button which will remove the car from the wishlist and the purchase button which will take the user to the purchase page.
 
-**Footer Social Links**
+###### Footer Social Links
 The links in the footer will allow the user to visit the app's social media platforms.
 
-**Bootstrap Notifcations Toasts** 
+###### Bootstrap Notifcations Toasts 
 The notifications would appear when the user have made a purchase, added to their wishlist and more.
 
-###### Store Owner Features
+**Store Owner Features**
 
-**Car/Review Management**
+###### Car/Review Management
 These pages will display the add car/review forms for the store owner to add cars/reviews to the site.
 
-**Edit/Remove Functions**
+###### Edit/Remove Functions
 When the store owner clicks the edit link on a listing or review, it will take them to the edit form for it where they can edit the information. The remove link will delete the car or review from the site.
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
-###### Features Left to Implement
+**Features Left to Implement**
 
-**Bootstrap Carousel**
+###### Bootstrap Carousel
 In future projects, I would like to add a carousel instead of a single image so that many images of the cars can be uploaded and viewed by the user.
 
 #### Technologies Used
 
-###### Languages
+**Languages**
 
-**HTML** 
+###### (HTML)[https://developer.mozilla.org/en-US/docs/Web/HTML] 
 This language was used to build the site and input content.
 
-**CSS**
+###### (CSS)[https://developer.mozilla.org/en-US/docs/Glossary/CSS]
 This was used to style to website and for media queries.
 
-**Python** 
+###### (Python)[https://www.python.org/about/]
 Python3 is used as programming language,and is used to run the backend of the site and its functions.
 
-**Javascript**
+###### (Javascript)[https://developer.mozilla.org/en-US/docs/Glossary/JavaScript]
 This language was used to function the sort dropdown, used for stripe purposes and more.
 
-###### Librarys, Frameworks & Tools
+**Librarys, Frameworks & Tools**
 
-**Django**
+###### (Django)[https://www.djangoproject.com/]
 This is the web framework used.
 
-**Bootstrap**
+###### (Bootstrap)[https://getbootstrap.com/]
 This was used to make the site responsive and customize the HTML like the navbar.
 
-**JQuery**
+###### (JQuery)[https://jquery.com/]
 This library was used to allow the bootstrap functions to work such as the notifcation toasts and the collapsible.
 
-**Stripe**
+###### (Stripe)[https://stripe.com/gb]
 This was used for functioning my payment method in the purchase app.
 
-**Jinja** 
+###### (Jinja)[https://jinja.palletsprojects.com/en/2.11.x/]
 This was used as the templating language for python.
 
-**SQlite3**
+###### (SQlite3)[https://www.sqlite.org/index.html]
 This was the database used in production in Gitpod.
 
-**PostgreSQL**
+###### (PostgreSQL)[https://www.postgresql.org/]
 This was the database used in deployment on Heroku.
 
-**AllAuth**
-This was used for to create registration, account management and authenthication.
-
-**Crispy-Forms** 
+###### (Crispy-Forms)[https://django-crispy-forms.readthedocs.io/en/latest/] 
 This was used to easily build the forms for my site.
 
-**Boto3**
+###### (Boto3)[https://pypi.org/project/boto3/]
 This is the  Amazon Web Services (AWS) SDK for Python. It allows developers to create, configure, and manage AWS services, like S3.
 
-**Gunicorn**
+###### (Gunicorn)[https://gunicorn.org/]
 A Python WSGI HTTP Server to enable deployment to Heroku
 
-**Psycopg2**
+###### (Psycopg2)[https://pypi.org/project/psycopg2-binary/]
 This will allow the PostgreSQL database to function with Django.
 
-**Pillow**
+###### (Pillow)[https://pillow.readthedocs.io/en/stable/]
 This will added image abilities to the python interpreter.
 
-###### Others
+###### (AllAuth)[https://django-allauth.readthedocs.io/en/latest/installation.html]
+This was used for to create registration, account management and authenthication.
 
-**Font Awesome**
+**Others**
+
+###### (Font Awesome)[https://fontawesome.com/]
 This icon library was used in my project to place icons like the 'My Account' icon and the footer social icons.
 
-**Google Fonts**
+###### (Google Fonts)[https://fonts.google.com/]
 This was used to include the font for my site 'Gayathri'.
 
-**Heroku**
+###### (Heroku)[https://dashboard.heroku.com/]
 The site is hosted on Heroku.
 
-**AWS S3 Bucket**
+###### (AWS S3 Bucket)[https://aws.amazon.com/s3/]
 The media and css for this site is hosted on AWS.
 
 #### Database Structure
@@ -352,47 +352,69 @@ Image | image | ImageField | null=True, blank=True
 Click here for Testing.
 
 #### Deployment
-
 This site were developed in the gitpod environment. This site is hosted by GitHub, it is directly deployed via the master branch and it was used for version control and commits and then pushed to a repository in Github and also pushed straight to Heroku as well.
 
 ##### Run Locally
-To run locally, You can clone this respository directly in the terminal of the environment you are using for code editing type: git clone Booksmart https://github.com/WHusssain937/Milestone-Project-4. To cut ties with this GitHub repository, type git remote rm origin into the terminal.
+Follow the instruction below to clone this project to your local machine:
+
+**Instructions**
+
+1. First, open the Integrated Development Environment (IDE) and go to the terminal. 
+2. Enter the following command: **git clone https://github.com/WHusssain937/Milestone-Project-4**
+3. Create a requirements file to install the required modules: **pip3 install -r requirements.txt**
+4. Add the environment variables, if you are using gitpod then the variables can be put in the settings or you can create a .env file. Make sure to add the .env file to the .gitignore file so that the database information isn't viewable to others and to keep the values safe. Add these values:
+
+> SECRET_KEY
+> STRIPE_PUBLIC_KEY
+> STRIPE_SECRET_KEY
+> STRIPE_WH_SECRET
+> DATABASE_URL
+
+5. To set up the Django SQlite3 tables that are needed for this project, please use the following commands in the terminal:
+> python3 manage.py makemigrations
+> python3 manage.py migrate
+6. Create a superuser so you can work as an admin, add this command to the terminal: **python3 manage.py createsuperuser**, then create a username and password for the superuser.
+7. Finally, you can test the cloned application by using the following command: **python3 manage.py runserver**
 
 ##### Heroku Deployment
 1. First, you will need to register/login to Heroku.
 2. Then, on your dashboard click on the 'New' button to create the app.
 3. Name your app and select your region.
 4. To be able to use the PostgreSQL database for Heroku deployment. Go to 'Resources', search and select it as a free add-on.
-5. After the app has been created, go to settings and click on Reveal Config Variables' button to input the following values.
-Key | Value
---- | -----
+5. After the app has been created, go to settings and click on 'Reveal Config Variables' button to input the following values.
+
+Key | Value |
+--- | ----- |
 DATABASE_URL | Heroku Postgres Database URL
 SECRET_KEY | Secret Key used for your Django project
 STRIPE_PUBLIC_KEY| Obtained from your Stripe account
 STRIPE_SECRET_KEY| Obtained from your Stripe account
 STRIPE_WH_SECRET| Obtained from your Stripe account
-6. Next, create a requirements.txt file in your gitpod terminal using the following command:  pip3 freeze --local > requirements.txt
-7. Then, in the terminal create a Procfile with the following command: echo web: gunicorn german_whips.wsgi:application > Procfile
-8. Then, in the terminal set up the database with PostgreSQL using the following commands:  python3 manage.py | makemigrations python3 manage.py migrate
-9. You will need to create a superuser to access the admin. First, enter the following: python3 manage.py createsuperuser, then create the username and password for your superuser. 
-10. Now, using the following command, you can test the cloned application to see if it works: python3 manage.py runserver
-11. Commit your changes using the following commands: git add . | git commit -m "Add Message Here!"
-12. In the gitpod terminal, login to Heroku with the following command: heroku login -i and enter your login credentials.
-13. Once logged in, connect your Heroku app to your remote repository using the following command in the terminal: heroku git:remote -a <your app name here> 
-14. Lastly, Push to Heroku with the following command in the terminal: git push heroku master  
+
+6. Next, create a requirements.txt file in your gitpod terminal using the following command:  **pip3 freeze --local > requirements.txt**
+7. Then, in the terminal create a Procfile with the following command: **echo web: gunicorn german_whips.wsgi:application > Procfile**
+8. Then, in the terminal set up the database with PostgreSQL using the following commands:  **python3 manage.py | makemigrations python3 manage.py migrate**
+9. You will need to create a superuser to access the admin. First, enter the following: **python3 manage.py createsuperuser**, then create the username and password for your superuser. 
+10. Now, using the following command, you can test the cloned application to see if it works: **python3 manage.py runserver**.
+11. Commit your changes using the following commands: **git add . | git commit -m "Add Message Here!"**
+12. In the gitpod terminal, login to Heroku with the following command: **heroku login -i** and enter your login credentials.
+13. Once logged in, connect your Heroku app to your remote repository using the following command in the terminal: **heroku git:remote -a <your app name here>** 
+14. Lastly, Push to Heroku with the following command in the terminal: **git push heroku master**  
 
 ###### Hosting With AWS
 The static and media files for this project are held in AWS S3 Bucket. To host them as well, you will need to create a AWS account and then create your S3 Bucket and make sure you allow public access. 
 The following environment variables will need to added to settings or .env file: 
-USE_AWS (set to True)
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY 
+
+> USE_AWS (set to True)
+> AWS_ACCESS_KEY_ID
+> AWS_SECRET_ACCESS_KEY 
 
 ###### Sending Emails Using Gmail
 To be able to send real emails, you will need to connect to a Gmail account. You will need to create/sign in to your Gmail account and then go to Google Account Security page, now create a two-step authenthication by creating a app password for the Django app. 
 Lastly, you will need to add the following environment variables to your settings or .env file:
-EMAIL_HOST_USER 
-EMAIL_HOST_PASS
+
+> EMAIL_HOST_USER 
+> EMAIL_HOST_PASS
 
 Credits
 Content
