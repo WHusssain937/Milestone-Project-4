@@ -402,7 +402,7 @@ Follow the instruction below to clone this project to your local machine:
 
 1. First, open the Integrated Development Environment (IDE) and go to the terminal. 
 2. Enter the following command: 
-> <p>git clone https://github.com/amybru/mug_shots</p>
+> > git clone https://github.com/WHusssain937/Milestone-Project-4
 3. Create a requirements file to install the required modules: **pip3 install -r requirements.txt**
 4. Add the environment variables, if you are using gitpod then the variables can be put in the settings or you can create a .env file. Make sure to add the .env file to the .gitignore file so that the database information isn't viewable to others and to keep the values safe. Add these values:
 
